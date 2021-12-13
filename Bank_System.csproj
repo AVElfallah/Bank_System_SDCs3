@@ -1,0 +1,220 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{390844F8-431E-4D38-B125-BAC2CD003B70}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>Bank_System</RootNamespace>
+    <AssemblyName>Bank_System</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>logo2_gk1_icon.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup>
+    <NoWin32Manifest>true</NoWin32Manifest>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="XanderUI">
+      <HintPath>C:\Users\Tor-jonior\Desktop\XanderUI-master\XanderUI-master\xander-ui-dll-main\XanderUI.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="model\companyAccount.cs" />
+    <Compile Include="model\FormModel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="model\personalAccount.cs" />
+    <Compile Include="model\RandomNumbers.cs" />
+    <Compile Include="viewmodel\createCard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="viewmodel\createCard.Designer.cs">
+      <DependentUpon>createCard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="viewmodel\customCompanyAccountPreview.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="viewmodel\customCompanyAccountPreview.Designer.cs">
+      <DependentUpon>customCompanyAccountPreview.cs</DependentUpon>
+    </Compile>
+    <Compile Include="viewmodel\customUserAccountPreview.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="viewmodel\customUserAccountPreview.Designer.cs">
+      <DependentUpon>customUserAccountPreview.cs</DependentUpon>
+    </Compile>
+    <Compile Include="view\newCompanyLoan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="view\newCompanyLoan.Designer.cs">
+      <DependentUpon>newCompanyLoan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="viewmodel\previewIMGDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="viewmodel\previewIMGDialog.Designer.cs">
+      <DependentUpon>previewIMGDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="view\releaseCreditcard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="view\releaseCreditcard.Designer.cs">
+      <DependentUpon>releaseCreditcard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="view\cashWithdrawal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="view\cashWithdrawal.Designer.cs">
+      <DependentUpon>cashWithdrawal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="view\financialDeposit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="view\financialDeposit.Designer.cs">
+      <DependentUpon>financialDeposit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="view\Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="view\Login.Designer.cs">
+      <DependentUpon>Login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="view\mainScreen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="view\mainScreen.Designer.cs">
+      <DependentUpon>mainScreen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="view\newCompanyAccount.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="view\newCompanyAccount.Designer.cs">
+      <DependentUpon>newCompanyAccount.cs</DependentUpon>
+    </Compile>
+    <Compile Include="view\newPersonalAccount.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="view\newPersonalAccount.Designer.cs">
+      <DependentUpon>newPersonalAccount.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="model\FormModel.resx">
+      <DependentUpon>FormModel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="viewmodel\createCard.resx">
+      <DependentUpon>createCard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="viewmodel\customCompanyAccountPreview.resx">
+      <DependentUpon>customCompanyAccountPreview.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="viewmodel\customUserAccountPreview.resx">
+      <DependentUpon>customUserAccountPreview.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="view\newCompanyLoan.resx">
+      <DependentUpon>newCompanyLoan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="viewmodel\previewIMGDialog.resx">
+      <DependentUpon>previewIMGDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="view\releaseCreditcard.resx">
+      <DependentUpon>releaseCreditcard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="view\cashWithdrawal.resx">
+      <DependentUpon>cashWithdrawal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="view\financialDeposit.resx">
+      <DependentUpon>financialDeposit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="view\Login.resx">
+      <DependentUpon>Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="view\mainScreen.resx">
+      <DependentUpon>mainScreen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="view\newCompanyAccount.resx">
+      <DependentUpon>newCompanyAccount.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="view\newPersonalAccount.resx">
+      <DependentUpon>newPersonalAccount.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <Content Include="assets\background.jpg" />
+    <Content Include="assets\bank.png" />
+    <Content Include="assets\bar-chart-2.png" />
+    <Content Include="assets\company.png" />
+    <Content Include="assets\E77B.png" />
+    <Content Include="assets\eyepreview.png" />
+    <Content Include="assets\file-text.png" />
+    <Content Include="assets\logo2.png" />
+    <Content Include="assets\preview.png" />
+    <Content Include="assets\user.png" />
+    <Content Include="logo2_gk1_icon.ico" />
+    <None Include="assets\card.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
