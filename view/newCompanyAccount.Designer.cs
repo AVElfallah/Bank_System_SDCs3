@@ -181,6 +181,7 @@
             this.cash.Size = new System.Drawing.Size(299, 26);
             this.cash.TabIndex = 32;
             this.cash.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.cash.TextChanged += new System.EventHandler(this.cash_TextChanged);
             // 
             // pictureBox5
             // 

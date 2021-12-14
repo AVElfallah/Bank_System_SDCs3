@@ -29,7 +29,7 @@ namespace Bank_System.viewmodel
             this.nationalIdPhoto.Image = new Bitmap(account.nationalIdPhotoPath);
             this.job.Text = account.job;
             this.tradeReportPhoto.Image = new Bitmap(account.tradeReportPhotoPath);
-           
+
             this.crruncy.Text = account.crruncy;
             this.accountReport.Text = account.accountReport;
             this.notes.Text = account.notes;

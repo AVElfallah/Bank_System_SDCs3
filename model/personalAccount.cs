@@ -10,7 +10,7 @@
              nationalIdPhotoPath,
              job,
              tradeReportPhotoPath,
-       
+
              crruncy,
              accountReport,
              notes;

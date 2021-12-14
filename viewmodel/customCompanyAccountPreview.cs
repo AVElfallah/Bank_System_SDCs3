@@ -1,11 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Bank_System.viewmodel
@@ -16,21 +10,23 @@ namespace Bank_System.viewmodel
         public customCompanyAccountPreview(model.companyAccount accountPreview)
         {
             InitializeComponent();
-            account = accountPreview;   
+            account = accountPreview;
             accountNumber.Text = accountPreview.accountNumber;
-            accountName.Text= accountPreview.name;    
-            accountReport.Text= accountPreview.accountReport;
-            crruncy.Text= accountPreview.crruncy;
+            accountName.Text = accountPreview.name;
+            accountReport.Text = accountPreview.accountReport;
+            crruncy.Text = accountPreview.crruncy;
             cashAccount.Text = accountPreview.cash.ToString();
-            notes.Text= accountPreview.notes;
+            notes.Text = accountPreview.notes;
             try
             {
-                tradeReportPhoto.Image =new Bitmap( accountPreview.tradeReportPhotoPath);
+                tradeReportPhoto.Image = new Bitmap(accountPreview.tradeReportPhotoPath);
                 financialIdPhoto.Image = new Bitmap(accountPreview.financialIdPhotoPath);
             }
-            catch (Exception ) { 
+            catch (Exception)
+            {
             }
-            if (accountPreview.isHaveCheque) {
+            if (accountPreview.isHaveCheque)
+            {
                 this.isHaveChque.Text = "نعم";
                 this.isHaveChque.BackColor = Color.SpringGreen;
                 this.isHaveChque.ForeColor = Color.Maroon;

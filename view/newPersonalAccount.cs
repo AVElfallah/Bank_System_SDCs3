@@ -24,7 +24,7 @@ namespace Bank_System.view
             account.isHaveVisa = visaCheck.Checked;
             account.job = job.Text;
             account.cash = double.Parse(cash.Text);
-          
+
             account.accountReport = accountReport.Text;
             account.nationalIdPhotoPath = nationalID_FileDialog.FileName;
             account.tradeReportPhotoPath = tradeReport_FileDialog.FileName;

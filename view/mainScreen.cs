@@ -32,7 +32,7 @@ namespace Bank_System.view
             }
             else
             {
-                progressBar1.Value += 10;
+                progressBar1.Value += 20;
                 progressText.Text = progressBar1.Value.ToString() + "%";
             }
         }
@@ -92,6 +92,22 @@ namespace Bank_System.view
         {
             releaseCreditcard creditcard = new releaseCreditcard();
             creditcard.ShowDialog();
+        }
+
+        private void button9_MouseHover(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button9_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            newCompanyLoan companyLoan = new newCompanyLoan();
+            companyLoan.ShowDialog();
         }
     }
 }

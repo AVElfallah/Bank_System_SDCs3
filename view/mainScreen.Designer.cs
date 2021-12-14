@@ -215,6 +215,8 @@
             this.button9.TabIndex = 3;
             this.button9.Text = "كشف تعاملات";
             this.button9.UseVisualStyleBackColor = false;
+            this.button9.Click += new System.EventHandler(this.button9_Click);
+            this.button9.MouseHover += new System.EventHandler(this.button9_MouseHover);
             // 
             // pan
             // 
@@ -295,6 +297,7 @@
             this.button5.TabIndex = 3;
             this.button5.Text = "تمويل الشركات و المنشأت";
             this.button5.UseVisualStyleBackColor = false;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
             // button10
             // 

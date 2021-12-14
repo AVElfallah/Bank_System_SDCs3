@@ -16,14 +16,14 @@ namespace Bank_System.view
 
         private void button1_Click(object sender, System.EventArgs e)
         {
-            model.companyAccount company= new model.companyAccount();
-            company.accountNumber=model.RandomNumbers.accountNumberGen();
+            model.companyAccount company = new model.companyAccount();
+            company.accountNumber = model.RandomNumbers.accountNumberGen();
             company.name = companyName.Text;
             company.isHaveCheque = chequeCheck.Checked;
             company.crruncy = crruncy.Text;
-            company.accountReport=accountReport.Text;
-            company.cash=double.Parse(cash.Text);
-            company.notes=richNote.Text;
+            company.accountReport = accountReport.Text;
+            company.cash = double.Parse(cash.Text);
+            company.notes = richNote.Text;
             company.financialIdPhotoPath = financialID_FileDialog.FileName;
             company.tradeReportPhotoPath = tradeReport_FileDialog.FileName;
 
@@ -56,7 +56,7 @@ namespace Bank_System.view
             financialID_FileDialog.ShowDialog();
             if (financialID_FileDialog.FileName != "")
             {
-               taxsIdPath.Text = financialID_FileDialog.FileName;
+                taxsIdPath.Text = financialID_FileDialog.FileName;
             }
         }
 
@@ -69,6 +69,11 @@ namespace Bank_System.view
                 Bank_System.viewmodel.previewIMGDialog preview = new viewmodel.previewIMGDialog(financialID_FileDialog.FileName, bitmap);
                 preview.ShowDialog();
             }
+        }
+
+        private void cash_TextChanged(object sender, System.EventArgs e)
+        {
+            string str = "{}";
         }
     }
 }
