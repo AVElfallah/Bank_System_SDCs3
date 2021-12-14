@@ -31,6 +31,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(newCompanyLoan));
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.companyHasAccount = new System.Windows.Forms.TabPage();
+            this.label15 = new System.Windows.Forms.Label();
             this.totalInstallments = new System.Windows.Forms.TextBox();
             this.label14 = new System.Windows.Forms.Label();
             this.installmentsPaymentsSys = new System.Windows.Forms.ComboBox();
@@ -64,7 +65,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.companyName = new System.Windows.Forms.TextBox();
             this.companyNotHaveAccount = new System.Windows.Forms.TabPage();
-            this.label15 = new System.Windows.Forms.Label();
+            this.button3 = new System.Windows.Forms.Button();
             this.tabControl1.SuspendLayout();
             this.companyHasAccount.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -95,6 +96,7 @@
             this.companyHasAccount.BackColor = System.Drawing.Color.Gray;
             this.companyHasAccount.BackgroundImage = global::Bank_System.Properties.Resources.bank;
             this.companyHasAccount.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.companyHasAccount.Controls.Add(this.button3);
             this.companyHasAccount.Controls.Add(this.label15);
             this.companyHasAccount.Controls.Add(this.totalInstallments);
             this.companyHasAccount.Controls.Add(this.label14);
@@ -123,6 +125,17 @@
             this.companyHasAccount.Size = new System.Drawing.Size(432, 624);
             this.companyHasAccount.TabIndex = 0;
             this.companyHasAccount.Text = "قرض إتماني لحساب موجود بالفعل";
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label15.Location = new System.Drawing.Point(7, 916);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(118, 19);
+            this.label15.TabIndex = 51;
+            this.label15.Text = "الجنية المصري";
+            this.label15.Click += new System.EventHandler(this.label15_Click);
             // 
             // totalInstallments
             // 
@@ -219,7 +232,7 @@
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(26, 1077);
+            this.label7.Location = new System.Drawing.Point(26, 1122);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(14, 19);
             this.label7.TabIndex = 42;
@@ -486,16 +499,14 @@
             this.companyNotHaveAccount.TabIndex = 1;
             this.companyNotHaveAccount.Text = "قرض بدون حساب مسبق";
             // 
-            // label15
+            // button3
             // 
-            this.label15.AutoSize = true;
-            this.label15.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label15.Location = new System.Drawing.Point(7, 916);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(118, 19);
-            this.label15.TabIndex = 51;
-            this.label15.Text = "الجنية المصري";
-            this.label15.Click += new System.EventHandler(this.label15_Click);
+            this.button3.Location = new System.Drawing.Point(103, 1079);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(236, 40);
+            this.button3.TabIndex = 52;
+            this.button3.Text = "معاينة و حفظ";
+            this.button3.UseVisualStyleBackColor = true;
             // 
             // newCompanyLoan
             // 
@@ -564,5 +575,6 @@
         private System.Windows.Forms.ComboBox installmentsPaymentsSys;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.Button button3;
     }
 }
