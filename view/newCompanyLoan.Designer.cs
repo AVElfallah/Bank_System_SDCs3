@@ -31,23 +31,8 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(newCompanyLoan));
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.companyHasAccount = new System.Windows.Forms.TabPage();
-            this.label15 = new System.Windows.Forms.Label();
-            this.totalInstallments = new System.Windows.Forms.TextBox();
-            this.label14 = new System.Windows.Forms.Label();
-            this.installmentsPaymentsSys = new System.Windows.Forms.ComboBox();
-            this.label13 = new System.Windows.Forms.Label();
-            this.label12 = new System.Windows.Forms.Label();
-            this.totalLoanInstallments = new System.Windows.Forms.TextBox();
-            this.label10 = new System.Windows.Forms.Label();
-            this.totalCostOfLoan = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
-            this.richNote = new System.Windows.Forms.RichTextBox();
             this.button2 = new System.Windows.Forms.Button();
-            this.label6 = new System.Windows.Forms.Label();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
-            this.label5 = new System.Windows.Forms.Label();
-            this.tradeReportPath = new System.Windows.Forms.TextBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.cashAccount = new System.Windows.Forms.TextBox();
             this.accountReport = new System.Windows.Forms.TextBox();
@@ -65,14 +50,31 @@
             this.label1 = new System.Windows.Forms.Label();
             this.companyName = new System.Windows.Forms.TextBox();
             this.companyNotHaveAccount = new System.Windows.Forms.TabPage();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.button3 = new System.Windows.Forms.Button();
+            this.label15 = new System.Windows.Forms.Label();
+            this.totalInstallments = new System.Windows.Forms.TextBox();
+            this.label14 = new System.Windows.Forms.Label();
+            this.installmentsPaymentsSys = new System.Windows.Forms.ComboBox();
+            this.label13 = new System.Windows.Forms.Label();
+            this.label12 = new System.Windows.Forms.Label();
+            this.totalLoanInstallments = new System.Windows.Forms.TextBox();
+            this.label10 = new System.Windows.Forms.Label();
+            this.totalCostOfLoan = new System.Windows.Forms.TextBox();
+            this.richNote = new System.Windows.Forms.RichTextBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.tradeReportPath = new System.Windows.Forms.TextBox();
             this.tabControl1.SuspendLayout();
             this.companyHasAccount.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.groupBox2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             this.SuspendLayout();
             // 
             // tabControl1
@@ -96,24 +98,9 @@
             this.companyHasAccount.BackColor = System.Drawing.Color.Gray;
             this.companyHasAccount.BackgroundImage = global::Bank_System.Properties.Resources.bank;
             this.companyHasAccount.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.companyHasAccount.Controls.Add(this.button3);
-            this.companyHasAccount.Controls.Add(this.label15);
-            this.companyHasAccount.Controls.Add(this.totalInstallments);
-            this.companyHasAccount.Controls.Add(this.label14);
-            this.companyHasAccount.Controls.Add(this.installmentsPaymentsSys);
-            this.companyHasAccount.Controls.Add(this.label13);
-            this.companyHasAccount.Controls.Add(this.label12);
-            this.companyHasAccount.Controls.Add(this.totalLoanInstallments);
-            this.companyHasAccount.Controls.Add(this.label10);
-            this.companyHasAccount.Controls.Add(this.totalCostOfLoan);
+            this.companyHasAccount.Controls.Add(this.groupBox2);
             this.companyHasAccount.Controls.Add(this.label7);
-            this.companyHasAccount.Controls.Add(this.richNote);
             this.companyHasAccount.Controls.Add(this.button2);
-            this.companyHasAccount.Controls.Add(this.label6);
-            this.companyHasAccount.Controls.Add(this.pictureBox3);
-            this.companyHasAccount.Controls.Add(this.pictureBox4);
-            this.companyHasAccount.Controls.Add(this.label5);
-            this.companyHasAccount.Controls.Add(this.tradeReportPath);
             this.companyHasAccount.Controls.Add(this.groupBox1);
             this.companyHasAccount.Controls.Add(this.button1);
             this.companyHasAccount.Controls.Add(this.label1);
@@ -126,108 +113,6 @@
             this.companyHasAccount.TabIndex = 0;
             this.companyHasAccount.Text = "قرض إتماني لحساب موجود بالفعل";
             // 
-            // label15
-            // 
-            this.label15.AutoSize = true;
-            this.label15.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label15.Location = new System.Drawing.Point(7, 916);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(118, 19);
-            this.label15.TabIndex = 51;
-            this.label15.Text = "الجنية المصري";
-            this.label15.Click += new System.EventHandler(this.label15_Click);
-            // 
-            // totalInstallments
-            // 
-            this.totalInstallments.BackColor = System.Drawing.SystemColors.WindowFrame;
-            this.totalInstallments.Location = new System.Drawing.Point(189, 1035);
-            this.totalInstallments.Margin = new System.Windows.Forms.Padding(13, 3, 23, 3);
-            this.totalInstallments.Name = "totalInstallments";
-            this.totalInstallments.ReadOnly = true;
-            this.totalInstallments.Size = new System.Drawing.Size(211, 29);
-            this.totalInstallments.TabIndex = 50;
-            this.totalInstallments.Text = "0";
-            this.totalInstallments.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // label14
-            // 
-            this.label14.AutoSize = true;
-            this.label14.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.Location = new System.Drawing.Point(189, 1013);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(215, 19);
-            this.label14.TabIndex = 49;
-            this.label14.Text = "اجمالي القسط لفترة السداد";
-            // 
-            // installmentsPaymentsSys
-            // 
-            this.installmentsPaymentsSys.BackColor = System.Drawing.SystemColors.ActiveBorder;
-            this.installmentsPaymentsSys.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.installmentsPaymentsSys.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.installmentsPaymentsSys.FormattingEnabled = true;
-            this.installmentsPaymentsSys.Items.AddRange(new object[] {
-            "ربع سنوي (كل ثلاثة شهور)",
-            "سنوي (كل سنة)",
-            "شهري",
-            "نصف سنوي (كل 6 شهور)"});
-            this.installmentsPaymentsSys.Location = new System.Drawing.Point(49, 970);
-            this.installmentsPaymentsSys.Name = "installmentsPaymentsSys";
-            this.installmentsPaymentsSys.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.installmentsPaymentsSys.Size = new System.Drawing.Size(240, 27);
-            this.installmentsPaymentsSys.Sorted = true;
-            this.installmentsPaymentsSys.TabIndex = 48;
-            this.installmentsPaymentsSys.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
-            // 
-            // label13
-            // 
-            this.label13.AutoSize = true;
-            this.label13.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.Location = new System.Drawing.Point(195, 948);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(98, 19);
-            this.label13.TabIndex = 47;
-            this.label13.Text = "نظام السداد";
-            // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.Location = new System.Drawing.Point(299, 949);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(103, 19);
-            this.label12.TabIndex = 46;
-            this.label12.Text = "عدد الاقساط";
-            // 
-            // totalLoanInstallments
-            // 
-            this.totalLoanInstallments.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.totalLoanInstallments.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.totalLoanInstallments.Location = new System.Drawing.Point(299, 971);
-            this.totalLoanInstallments.Name = "totalLoanInstallments";
-            this.totalLoanInstallments.Size = new System.Drawing.Size(101, 26);
-            this.totalLoanInstallments.TabIndex = 45;
-            this.totalLoanInstallments.TextChanged += new System.EventHandler(this.totalLoanInstallments_TextChanged);
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(287, 891);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(112, 19);
-            this.label10.TabIndex = 44;
-            this.label10.Text = "مبلغ الاقتراض";
-            // 
-            // totalCostOfLoan
-            // 
-            this.totalCostOfLoan.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.totalCostOfLoan.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.totalCostOfLoan.Location = new System.Drawing.Point(133, 913);
-            this.totalCostOfLoan.Name = "totalCostOfLoan";
-            this.totalCostOfLoan.Size = new System.Drawing.Size(267, 26);
-            this.totalCostOfLoan.TabIndex = 43;
-            this.totalCostOfLoan.TextChanged += new System.EventHandler(this.totalCostOfLoan_TextChanged);
-            // 
             // label7
             // 
             this.label7.AutoSize = true;
@@ -238,17 +123,6 @@
             this.label7.TabIndex = 42;
             this.label7.Text = ".";
             // 
-            // richNote
-            // 
-            this.richNote.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.richNote.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.richNote.Location = new System.Drawing.Point(2, 725);
-            this.richNote.Name = "richNote";
-            this.richNote.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.richNote.Size = new System.Drawing.Size(398, 157);
-            this.richNote.TabIndex = 41;
-            this.richNote.Text = "";
-            // 
             // button2
             // 
             this.button2.Location = new System.Drawing.Point(145, 56);
@@ -258,65 +132,9 @@
             this.button2.Text = "إنشاء حساب مؤسسة ";
             this.button2.UseVisualStyleBackColor = true;
             // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(111, 703);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(289, 19);
-            this.label6.TabIndex = 35;
-            this.label6.Text = "تفاصيل كتابية ونتيجة المعيانة الميدانية";
-            // 
-            // pictureBox3
-            // 
-            this.pictureBox3.BackColor = System.Drawing.Color.Gainsboro;
-            this.pictureBox3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pictureBox3.Image = global::Bank_System.Properties.Resources.preview;
-            this.pictureBox3.Location = new System.Drawing.Point(103, 660);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(25, 26);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox3.TabIndex = 32;
-            this.pictureBox3.TabStop = false;
-            // 
-            // pictureBox4
-            // 
-            this.pictureBox4.BackColor = System.Drawing.Color.Gainsboro;
-            this.pictureBox4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pictureBox4.Image = global::Bank_System.Properties.Resources.eyepreview;
-            this.pictureBox4.Location = new System.Drawing.Point(69, 660);
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(32, 26);
-            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox4.TabIndex = 33;
-            this.pictureBox4.TabStop = false;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(180, 638);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(218, 19);
-            this.label5.TabIndex = 31;
-            this.label5.Text = "سجل تجاري لأسباب النشاط";
-            // 
-            // tradeReportPath
-            // 
-            this.tradeReportPath.BackColor = System.Drawing.Color.Gainsboro;
-            this.tradeReportPath.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.tradeReportPath.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tradeReportPath.Location = new System.Drawing.Point(138, 660);
-            this.tradeReportPath.Name = "tradeReportPath";
-            this.tradeReportPath.ReadOnly = true;
-            this.tradeReportPath.Size = new System.Drawing.Size(262, 26);
-            this.tradeReportPath.TabIndex = 30;
-            this.tradeReportPath.Text = "اختار صورة";
-            // 
             // groupBox1
             // 
-            this.groupBox1.BackColor = System.Drawing.Color.Transparent;
+            this.groupBox1.BackColor = System.Drawing.Color.Gray;
             this.groupBox1.Controls.Add(this.cashAccount);
             this.groupBox1.Controls.Add(this.accountReport);
             this.groupBox1.Controls.Add(this.crruncy);
@@ -330,7 +148,7 @@
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.textBox1);
             this.groupBox1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.groupBox1.Location = new System.Drawing.Point(2, 105);
+            this.groupBox1.Location = new System.Drawing.Point(5, 105);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(398, 522);
             this.groupBox1.TabIndex = 26;
@@ -499,14 +317,203 @@
             this.companyNotHaveAccount.TabIndex = 1;
             this.companyNotHaveAccount.Text = "قرض بدون حساب مسبق";
             // 
+            // groupBox2
+            // 
+            this.groupBox2.Controls.Add(this.button3);
+            this.groupBox2.Controls.Add(this.label15);
+            this.groupBox2.Controls.Add(this.totalInstallments);
+            this.groupBox2.Controls.Add(this.label14);
+            this.groupBox2.Controls.Add(this.installmentsPaymentsSys);
+            this.groupBox2.Controls.Add(this.label13);
+            this.groupBox2.Controls.Add(this.label12);
+            this.groupBox2.Controls.Add(this.totalLoanInstallments);
+            this.groupBox2.Controls.Add(this.label10);
+            this.groupBox2.Controls.Add(this.totalCostOfLoan);
+            this.groupBox2.Controls.Add(this.richNote);
+            this.groupBox2.Controls.Add(this.label6);
+            this.groupBox2.Controls.Add(this.pictureBox3);
+            this.groupBox2.Controls.Add(this.pictureBox4);
+            this.groupBox2.Controls.Add(this.label5);
+            this.groupBox2.Controls.Add(this.tradeReportPath);
+            this.groupBox2.Location = new System.Drawing.Point(6, 628);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(398, 549);
+            this.groupBox2.TabIndex = 43;
+            this.groupBox2.TabStop = false;
+            // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(103, 1079);
+            this.button3.Location = new System.Drawing.Point(68, 483);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(236, 40);
-            this.button3.TabIndex = 52;
+            this.button3.Size = new System.Drawing.Size(251, 40);
+            this.button3.TabIndex = 68;
             this.button3.Text = "معاينة و حفظ";
             this.button3.UseVisualStyleBackColor = true;
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label15.Location = new System.Drawing.Point(3, 302);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(118, 19);
+            this.label15.TabIndex = 67;
+            this.label15.Text = "الجنية المصري";
+            // 
+            // totalInstallments
+            // 
+            this.totalInstallments.BackColor = System.Drawing.SystemColors.WindowFrame;
+            this.totalInstallments.Location = new System.Drawing.Point(175, 415);
+            this.totalInstallments.Margin = new System.Windows.Forms.Padding(13, 3, 23, 3);
+            this.totalInstallments.Name = "totalInstallments";
+            this.totalInstallments.ReadOnly = true;
+            this.totalInstallments.Size = new System.Drawing.Size(211, 29);
+            this.totalInstallments.TabIndex = 66;
+            this.totalInstallments.Text = "0";
+            this.totalInstallments.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label14.Location = new System.Drawing.Point(175, 393);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(215, 19);
+            this.label14.TabIndex = 65;
+            this.label14.Text = "اجمالي القسط لفترة السداد";
+            // 
+            // installmentsPaymentsSys
+            // 
+            this.installmentsPaymentsSys.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.installmentsPaymentsSys.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.installmentsPaymentsSys.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.installmentsPaymentsSys.FormattingEnabled = true;
+            this.installmentsPaymentsSys.Items.AddRange(new object[] {
+            "ربع سنوي (كل ثلاثة شهور)",
+            "سنوي (كل سنة)",
+            "شهري",
+            "نصف سنوي (كل 6 شهور)"});
+            this.installmentsPaymentsSys.Location = new System.Drawing.Point(34, 354);
+            this.installmentsPaymentsSys.Name = "installmentsPaymentsSys";
+            this.installmentsPaymentsSys.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.installmentsPaymentsSys.Size = new System.Drawing.Size(240, 27);
+            this.installmentsPaymentsSys.Sorted = true;
+            this.installmentsPaymentsSys.TabIndex = 64;
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label13.Location = new System.Drawing.Point(180, 332);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(98, 19);
+            this.label13.TabIndex = 63;
+            this.label13.Text = "نظام السداد";
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.Location = new System.Drawing.Point(284, 333);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(103, 19);
+            this.label12.TabIndex = 62;
+            this.label12.Text = "عدد الاقساط";
+            // 
+            // totalLoanInstallments
+            // 
+            this.totalLoanInstallments.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.totalLoanInstallments.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.totalLoanInstallments.Location = new System.Drawing.Point(284, 355);
+            this.totalLoanInstallments.Name = "totalLoanInstallments";
+            this.totalLoanInstallments.Size = new System.Drawing.Size(101, 26);
+            this.totalLoanInstallments.TabIndex = 61;
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.Location = new System.Drawing.Point(275, 277);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(112, 19);
+            this.label10.TabIndex = 60;
+            this.label10.Text = "مبلغ الاقتراض";
+            // 
+            // totalCostOfLoan
+            // 
+            this.totalCostOfLoan.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.totalCostOfLoan.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.totalCostOfLoan.Location = new System.Drawing.Point(129, 299);
+            this.totalCostOfLoan.Name = "totalCostOfLoan";
+            this.totalCostOfLoan.Size = new System.Drawing.Size(254, 26);
+            this.totalCostOfLoan.TabIndex = 59;
+            // 
+            // richNote
+            // 
+            this.richNote.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.richNote.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.richNote.Location = new System.Drawing.Point(6, 112);
+            this.richNote.Name = "richNote";
+            this.richNote.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.richNote.Size = new System.Drawing.Size(379, 157);
+            this.richNote.TabIndex = 58;
+            this.richNote.Text = "";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(98, 90);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(289, 19);
+            this.label6.TabIndex = 57;
+            this.label6.Text = "تفاصيل كتابية ونتيجة المعيانة الميدانية";
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.BackColor = System.Drawing.Color.Gainsboro;
+            this.pictureBox3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pictureBox3.Image = global::Bank_System.Properties.Resources.preview;
+            this.pictureBox3.Location = new System.Drawing.Point(89, 50);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(25, 26);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox3.TabIndex = 55;
+            this.pictureBox3.TabStop = false;
+            // 
+            // pictureBox4
+            // 
+            this.pictureBox4.BackColor = System.Drawing.Color.Gainsboro;
+            this.pictureBox4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pictureBox4.Image = global::Bank_System.Properties.Resources.eyepreview;
+            this.pictureBox4.Location = new System.Drawing.Point(55, 50);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(32, 26);
+            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox4.TabIndex = 56;
+            this.pictureBox4.TabStop = false;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(161, 28);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(226, 19);
+            this.label5.TabIndex = 54;
+            this.label5.Text = "صورة لوثيقة المعاينة الميدانية";
+            // 
+            // tradeReportPath
+            // 
+            this.tradeReportPath.BackColor = System.Drawing.Color.Gainsboro;
+            this.tradeReportPath.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.tradeReportPath.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tradeReportPath.Location = new System.Drawing.Point(124, 50);
+            this.tradeReportPath.Name = "tradeReportPath";
+            this.tradeReportPath.ReadOnly = true;
+            this.tradeReportPath.Size = new System.Drawing.Size(262, 26);
+            this.tradeReportPath.TabIndex = 53;
+            this.tradeReportPath.Text = "اختار صورة";
             // 
             // newCompanyLoan
             // 
@@ -525,12 +532,14 @@
             this.tabControl1.ResumeLayout(false);
             this.companyHasAccount.ResumeLayout(false);
             this.companyHasAccount.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.groupBox2.ResumeLayout(false);
+            this.groupBox2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -558,23 +567,24 @@
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.PictureBox pictureBox3;
-        private System.Windows.Forms.PictureBox pictureBox4;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox tradeReportPath;
         private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.RichTextBox richNote;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.TextBox totalLoanInstallments;
-        private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.TextBox totalCostOfLoan;
+        private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Label label15;
         private System.Windows.Forms.TextBox totalInstallments;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.ComboBox installmentsPaymentsSys;
         private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.Label label15;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.TextBox totalLoanInstallments;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.TextBox totalCostOfLoan;
+        private System.Windows.Forms.RichTextBox richNote;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.PictureBox pictureBox3;
+        private System.Windows.Forms.PictureBox pictureBox4;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.TextBox tradeReportPath;
     }
 }
