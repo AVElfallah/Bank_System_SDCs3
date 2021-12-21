@@ -4,6 +4,8 @@ namespace Bank_System.model
 {
     public class companyAccount
     {
+
+
         public String
               name,
               accountNumber,

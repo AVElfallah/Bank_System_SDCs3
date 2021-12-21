@@ -6,11 +6,7 @@ namespace Bank_System.viewmodel
 {
     public partial class previewIMGDialog : Form
     {
-        public previewIMGDialog()
-        {
-            InitializeComponent();
-
-        }
+        
         public previewIMGDialog(String filepath, Bitmap img)
         {
             InitializeComponent();

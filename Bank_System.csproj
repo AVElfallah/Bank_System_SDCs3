@@ -56,12 +56,17 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="model\calcLoanEndDate.cs" />
     <Compile Include="model\companyAccount.cs" />
+    <Compile Include="model\CurrencyInfo.cs" />
     <Compile Include="model\FormModel.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="model\LoanClasses\companyWithAccountInOurBankLoan.cs" />
+    <Compile Include="model\LoanClasses\loanBase.cs" />
     <Compile Include="model\personalAccount.cs" />
     <Compile Include="model\RandomNumbers.cs" />
+    <Compile Include="model\ToWord.cs" />
     <Compile Include="viewmodel\createCard.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -79,6 +84,12 @@
     </Compile>
     <Compile Include="viewmodel\customUserAccountPreview.Designer.cs">
       <DependentUpon>customUserAccountPreview.cs</DependentUpon>
+    </Compile>
+    <Compile Include="viewmodel\loanCompanyReportPreview.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="viewmodel\loanCompanyReportPreview.Designer.cs">
+      <DependentUpon>loanCompanyReportPreview.cs</DependentUpon>
     </Compile>
     <Compile Include="view\newCompanyLoan.cs">
       <SubType>Form</SubType>
@@ -147,6 +158,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="viewmodel\customUserAccountPreview.resx">
       <DependentUpon>customUserAccountPreview.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="viewmodel\loanCompanyReportPreview.resx">
+      <DependentUpon>loanCompanyReportPreview.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="view\newCompanyLoan.resx">
       <DependentUpon>newCompanyLoan.cs</DependentUpon>
