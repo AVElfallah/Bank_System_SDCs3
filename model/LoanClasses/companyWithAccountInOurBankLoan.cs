@@ -2,10 +2,10 @@
 {
     public class companyWithAccountInOurBankLoan : loanBase
     {
-      public  companyAccount companyAccount { get; set; }
- 
-        
-        
+        public companyAccount companyAccount { get; set; }
+
+
+
 
 
 

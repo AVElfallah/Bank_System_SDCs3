@@ -63,6 +63,7 @@
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="model\LoanClasses\companyWithAccountInOurBankLoan.cs" />
+    <Compile Include="model\LoanClasses\companyWithoutAccountLoan.cs" />
     <Compile Include="model\LoanClasses\loanBase.cs" />
     <Compile Include="model\personalAccount.cs" />
     <Compile Include="model\RandomNumbers.cs" />

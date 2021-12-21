@@ -109,7 +109,7 @@ namespace Bank_System.model
 
         public string Arabic310CurrencyPartName { get; set; }
 
-      
+
         public string Arabic1199CurrencyPartName { get; set; }
 
     }

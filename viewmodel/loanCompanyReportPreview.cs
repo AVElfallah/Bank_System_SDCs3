@@ -16,16 +16,16 @@ namespace Bank_System.viewmodel
             loan = companyLoan;
             loanID.Text = loan.loanID;
             loanValue.Text = loan.loanValue.ToString();
-            
-            arabicLoanValue.Text =new model.ToWord(loan.loanValue,model.CurrencyInfo.CurrencyType.EGP)
+
+            arabicLoanValue.Text = new model.ToWord(loan.loanValue, model.CurrencyInfo.CurrencyType.EGP)
                 .ConvertToArabic();
-            installmentsNumber.Text =loan.installmentsNumber.ToString();
+            installmentsNumber.Text = loan.installmentsNumber.ToString();
             installmentSystem.Text = loan.installmentsSystem;
-            installmentValue.Text=loan.installmentValue.ToString();
-            binfetPrecentage.Text=loan.benfitPrecent.ToString();
-            loanValueWithBinfets.Text=loan.loanValueWithBinfets.ToString();
+            installmentValue.Text = loan.installmentValue.ToString();
+            binfetPrecentage.Text = loan.benfitPrecent.ToString();
+            loanValueWithBinfets.Text = loan.loanValueWithBinfets.ToString();
             installmentWithBinfet.Text = loan.installmentValueWithBinfets.ToString();
-            loanEndDate.Text=model.calcLoanEndDate.endDateString(loan.loanEndDate);   
+            loanEndDate.Text = model.calcLoanEndDate.endDateString(loan.loanEndDate);
 
 
         }

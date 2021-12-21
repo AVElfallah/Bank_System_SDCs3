@@ -2,7 +2,7 @@
 
 namespace Bank_System.model
 {
-  public  class ToWord
+    public class ToWord
     {
 
 
@@ -26,7 +26,7 @@ namespace Bank_System.model
         #region General
 
 
-        public  ToWord(double number, CurrencyInfo.CurrencyType currency)
+        public ToWord(double number, CurrencyInfo.CurrencyType currency)
         {
             InitializeClass(number, currency, "فقط", "لا غير");
         }

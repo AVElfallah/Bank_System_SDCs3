@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Bank_System.model
 {
@@ -13,7 +9,7 @@ namespace Bank_System.model
 
             var now = DateTime.Now;
             int increasingVal;
-         
+
             switch (installmentSystem)
             {
                 case "شهري":
@@ -36,21 +32,21 @@ namespace Bank_System.model
             }
 
             now = now.AddMonths(increasingVal * installmentsNumber);
-            return now; 
+            return now;
         }
         public static String endDateString(string installmentSystem, int installmentsNumber)
         {
-           
-         var now =endDate(installmentSystem, installmentsNumber);   
-            string    backStr = $"ينقضي في عام {now.Year} في شهر {now.Month} ";
-            
-           
-            return backStr;    
+
+            var now = endDate(installmentSystem, installmentsNumber);
+            string backStr = $"ينقضي في عام {now.Year} في شهر {now.Month} ";
+
+
+            return backStr;
         }
         public static String endDateString(DateTime endDate)
         {
 
-          
+
             string backStr = $"ينقضي في عام {endDate.Year} في شهر {endDate.Month} ";
 
 
