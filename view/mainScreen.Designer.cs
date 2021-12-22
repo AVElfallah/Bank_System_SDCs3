@@ -35,8 +35,8 @@
             this.Panel1 = new XanderUI.XUIWidgetPanel();
             this.singOut = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.xuiBanner1 = new XanderUI.XUIBanner();
-            this.role = new XanderUI.XUIBanner();
+            this.a_role = new XanderUI.XUIBanner();
+            this.a_name = new XanderUI.XUIBanner();
             this.button12 = new System.Windows.Forms.Button();
             this.button11 = new System.Windows.Forms.Button();
             this.button9 = new System.Windows.Forms.Button();
@@ -103,8 +103,8 @@
             this.Panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.Panel1.Controls.Add(this.singOut);
             this.Panel1.Controls.Add(this.pictureBox1);
-            this.Panel1.Controls.Add(this.xuiBanner1);
-            this.Panel1.Controls.Add(this.role);
+            this.Panel1.Controls.Add(this.a_role);
+            this.Panel1.Controls.Add(this.a_name);
             this.Panel1.ControlsAsWidgets = false;
             this.Panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.Panel1.Location = new System.Drawing.Point(0, 0);
@@ -140,33 +140,34 @@
             this.pictureBox1.TabIndex = 3;
             this.pictureBox1.TabStop = false;
             // 
-            // xuiBanner1
+            // a_role
             // 
-            this.xuiBanner1.BackColor = System.Drawing.Color.Transparent;
-            this.xuiBanner1.BannerColor = System.Drawing.SystemColors.HighlightText;
-            this.xuiBanner1.BorderColor = System.Drawing.SystemColors.WindowText;
-            this.xuiBanner1.Enabled = false;
-            this.xuiBanner1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.xuiBanner1.ForeColor = System.Drawing.SystemColors.WindowText;
-            this.xuiBanner1.Location = new System.Drawing.Point(22, 55);
-            this.xuiBanner1.Name = "xuiBanner1";
-            this.xuiBanner1.Size = new System.Drawing.Size(90, 32);
-            this.xuiBanner1.TabIndex = 0;
-            this.xuiBanner1.Text = "محاسب";
+            this.a_role.BackColor = System.Drawing.Color.Transparent;
+            this.a_role.BannerColor = System.Drawing.SystemColors.HighlightText;
+            this.a_role.BorderColor = System.Drawing.SystemColors.WindowText;
+            this.a_role.Enabled = false;
+            this.a_role.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.a_role.ForeColor = System.Drawing.SystemColors.WindowText;
+            this.a_role.Location = new System.Drawing.Point(22, 55);
+            this.a_role.Name = "a_role";
+            this.a_role.Size = new System.Drawing.Size(90, 32);
+            this.a_role.TabIndex = 0;
+            this.a_role.Text = "محاسب";
             // 
-            // role
+            // a_name
             // 
-            this.role.BackColor = System.Drawing.Color.Transparent;
-            this.role.BannerColor = System.Drawing.SystemColors.HighlightText;
-            this.role.BorderColor = System.Drawing.SystemColors.WindowText;
-            this.role.Enabled = false;
-            this.role.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.role.ForeColor = System.Drawing.SystemColors.WindowText;
-            this.role.Location = new System.Drawing.Point(-16, 7);
-            this.role.Name = "role";
-            this.role.Size = new System.Drawing.Size(172, 42);
-            this.role.TabIndex = 0;
-            this.role.Text = "علي معلول";
+            this.a_name.BackColor = System.Drawing.Color.Transparent;
+            this.a_name.BannerColor = System.Drawing.SystemColors.HighlightText;
+            this.a_name.BorderColor = System.Drawing.SystemColors.WindowText;
+            this.a_name.Enabled = false;
+            this.a_name.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.a_name.ForeColor = System.Drawing.SystemColors.WindowText;
+            this.a_name.Location = new System.Drawing.Point(-16, 7);
+            this.a_name.Name = "a_name";
+            this.a_name.Size = new System.Drawing.Size(172, 42);
+            this.a_name.TabIndex = 0;
+            this.a_name.Text = "علي معلول";
+            this.a_name.Click += new System.EventHandler(this.role_Click);
             // 
             // button12
             // 
@@ -197,7 +198,7 @@
             this.button11.Name = "button11";
             this.button11.Size = new System.Drawing.Size(239, 37);
             this.button11.TabIndex = 3;
-            this.button11.Text = "كشف حساب";
+            this.button11.Text = "معلومات حساب";
             this.button11.UseVisualStyleBackColor = false;
             // 
             // button9
@@ -441,8 +442,8 @@
         private System.Windows.Forms.Label progressText;
         private System.Windows.Forms.ProgressBar progressBar1;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private XanderUI.XUIBanner xuiBanner1;
-        private XanderUI.XUIBanner role;
+        private XanderUI.XUIBanner a_role;
+        private XanderUI.XUIBanner a_name;
         private System.Windows.Forms.Button button12;
         private System.Windows.Forms.Button button11;
         private System.Windows.Forms.Button button9;

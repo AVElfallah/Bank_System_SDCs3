@@ -24,8 +24,13 @@ namespace Bank_System.model.LoanClasses
         public double benfitPrecent { get; set; }
         //تاريخ نهاية القرض
         public DateTime loanEndDate { get; set; }
-        //مسار صورة المعاينة الميدانية
-        public String fieldPreviewImagePaht { get; set; }
+        // صورة المعاينة الميدانية
+        public byte[] fieldPreviewImage
+        {
+            get;
+            set;
+        }
+        public String Paht { get; set; }
         //تفاصيل وملاحظات المعاينة الميدانية
         public String fieldPreviewNote { get; set; }
 

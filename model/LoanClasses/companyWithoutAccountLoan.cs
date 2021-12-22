@@ -5,7 +5,11 @@
         public companyAccount company { get; set; }
         public bool haveBankAccount { get; set; }
         #region ifCompanyHaveAnotherBankAccount
-        public string bankAccountReportLast6MonthPath { get; set; }
+        public byte[] bankAccountReportLast6Month
+        {
+            get { return bankAccountReportLast6Month; }
+            set { bankAccountReportLast6Month = photo.encryption(value.ToString()); }
+        }
         public string bankName { get; set; }
 
         public int bankNumber { get; set; }

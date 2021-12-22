@@ -17,10 +17,12 @@ namespace Bank_System.viewmodel
             crruncy.Text = accountPreview.crruncy;
             cashAccount.Text = accountPreview.cash.ToString();
             notes.Text = accountPreview.notes;
+            arabic_cash.Text = new model.ToWord(accountPreview.cash,accountPreview.crruncy).ConvertToArabic();
             try
             {
-                tradeReportPhoto.Image = new Bitmap(accountPreview.tradeReportPhotoPath);
-                financialIdPhoto.Image = new Bitmap(accountPreview.financialIdPhotoPath);
+                tradeReportPhoto.Image = model.photo.decryption(account.tradeReportPhoto);
+                financialIdPhoto.Image = model.photo.decryption(account.financialIdPhoto);
+
             }
             catch (Exception)
             {
@@ -43,6 +45,25 @@ namespace Bank_System.viewmodel
         private void printReport_Click(object sender, EventArgs e)
         {
             MessageBox.Show("تم طباعة التقرير");
+        }
+
+        private void end_Click(object sender, EventArgs e)
+        {
+            if (db.companyAccountDB.addAccount(account)) {
+                MessageBox.Show("تم اضافة الحساب بنجاح");
+                model.systemData.navigator.formStore.Pop().Close();
+                this.Close();
+
+            }
+           
+
+        }
+
+        private void edit_Click(object sender, EventArgs e)
+        {
+            model.systemData.navigator.formStore.Pop().Visible = true;
+            this.Hide();
+
         }
     }
 }

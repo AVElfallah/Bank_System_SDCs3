@@ -107,7 +107,7 @@ namespace Bank_System.view
 
         private void pictureBox5_Click(object sender, EventArgs e)
         {
-            
+
             if (financialID_FileDialog.FileName != "")
             {
                 new viewmodel.previewIMGDialog(financialID_FileDialog.FileName
@@ -178,7 +178,8 @@ namespace Bank_System.view
         }
         private void button4_Click(object sender, EventArgs e)
         {
-            if (validationCaseHaveAnotherBankAccount()) {
+            if (validationCaseHaveAnotherBankAccount())
+            {
 
                 System.Windows.Forms.MessageBox.Show("testDone");
             }
@@ -276,7 +277,7 @@ namespace Bank_System.view
                     endDATE = model.calcLoanEndDate.endDate(inSystem, ins);
                 }
             }
-            catch (Exception ex) { }
+            catch (Exception) { }
         }
 
         void calcinstallmentWithBinfet2()
@@ -339,7 +340,7 @@ namespace Bank_System.view
                     endDATE = model.calcLoanEndDate.endDate(inSystem, ins);
                 }
             }
-            catch (Exception ex) { }
+            catch (Exception) { }
         }
 
         void calcinstallmentWithBinfet()

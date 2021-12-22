@@ -56,6 +56,10 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="db\companyAccountDB.cs" />
+    <Compile Include="db\createConnection.cs" />
+    <Compile Include="db\personalAccountDB.cs" />
+    <Compile Include="db\systemLogin.cs" />
     <Compile Include="model\calcLoanEndDate.cs" />
     <Compile Include="model\companyAccount.cs" />
     <Compile Include="model\CurrencyInfo.cs" />
@@ -66,7 +70,10 @@
     <Compile Include="model\LoanClasses\companyWithoutAccountLoan.cs" />
     <Compile Include="model\LoanClasses\loanBase.cs" />
     <Compile Include="model\personalAccount.cs" />
+    <Compile Include="model\photo.cs" />
     <Compile Include="model\RandomNumbers.cs" />
+    <Compile Include="model\systemData\adminInfo.cs" />
+    <Compile Include="model\systemData\navigator.cs" />
     <Compile Include="model\ToWord.cs" />
     <Compile Include="viewmodel\createCard.cs">
       <SubType>Form</SubType>

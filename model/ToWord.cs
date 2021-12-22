@@ -25,7 +25,27 @@ namespace Bank_System.model
 
         #region General
 
+        public ToWord(double number, string currency)
+        {
+            CurrencyInfo.CurrencyType cur;
 
+            switch (currency)
+            {
+                case "الجنية المصري":
+                    cur = CurrencyInfo.CurrencyType.EGP;
+                    break;
+                case "الدولار الامريكي":
+                    cur = CurrencyInfo.CurrencyType.DUS;
+                    break;
+                case "اليورو":
+                    cur = CurrencyInfo.CurrencyType.EUR;
+                    break;
+                default:
+                    cur = CurrencyInfo.CurrencyType.EGP;
+                    break;
+            }
+            InitializeClass(number, cur, "فقط", "لا غير");
+        }
         public ToWord(double number, CurrencyInfo.CurrencyType currency)
         {
             InitializeClass(number, currency, "فقط", "لا غير");
@@ -45,23 +65,25 @@ namespace Bank_System.model
 
         private string GetdoubleValue(string doublePart)
         {
-            string result = String.Empty;
+           
+                string result = String.Empty;
 
-            if (Currency.PartPrecision != doublePart.Length)
-            {
-                result = String.Format("{0}.{1}", doublePart.Substring(0, Currency.PartPrecision), doublePart.Substring(Currency.PartPrecision, doublePart.Length - Currency.PartPrecision));
+                if (Currency.PartPrecision != doublePart.Length)
+                {
+                    result = String.Format("{0}.{1}", doublePart.Substring(0, Currency.PartPrecision), doublePart.Substring(Currency.PartPrecision, doublePart.Length - Currency.PartPrecision));
 
-                result = (Math.Round(Convert.ToDouble(result))).ToString();
-            }
-            else
-                result = doublePart;
+                    result = (Math.Round(Convert.ToDouble(result))).ToString();
+                }
+                else
+                    result = doublePart;
 
-            for (int i = 0; i < Currency.PartPrecision - result.Length; i++)
-            {
-                result += "0";
-            }
+                for (int i = 0; i < Currency.PartPrecision - result.Length; i++)
+                {
+                    result += "0";
+                }
 
-            return result;
+                return result;
+     
         }
 
 

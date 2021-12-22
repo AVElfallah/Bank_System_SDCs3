@@ -15,6 +15,7 @@ namespace Bank_System.view
         private void button1_Click_1(object sender, EventArgs e)
         {
             model.personalAccount account = new model.personalAccount();
+       
             account.name = fullName.Text;
             account.accountNumber = model.RandomNumbers.accountNumberGen();
             account.national = national.Text;
@@ -26,13 +27,25 @@ namespace Bank_System.view
             account.cash = double.Parse(cash.Text);
 
             account.accountReport = accountReport.Text;
-            account.nationalIdPhotoPath = nationalID_FileDialog.FileName;
-            account.tradeReportPhotoPath = tradeReport_FileDialog.FileName;
+            account.nationalIdPhoto = model.photo.encryption(nationalID_FileDialog.FileName);
+            account.tradeReportPhoto = model.photo.encryption(tradeReport_FileDialog.FileName);
             account.notes = richNote.Text;
+            if (account.isHaveVisa)
+            {
+                if (account.accountVisa == null)
+                {
+                    account.accountVisa=viewmodel.createCard.getNewVisa();
+                }
 
-            viewmodel.customUserAccountPreview custom = new viewmodel.customUserAccountPreview(account);
 
-            custom.ShowDialog();
+            }
+            if (account.accountVisa != null)
+            {
+                model.systemData.navigator.formStore.Push(this);
+                viewmodel.customUserAccountPreview custom = new viewmodel.customUserAccountPreview(account);
+                this.Visible = false;
+                custom.ShowDialog();
+            }
         }
 
         private void pictureBox1_Click_1(object sender, EventArgs e)
@@ -40,7 +53,11 @@ namespace Bank_System.view
             nationalID_FileDialog.ShowDialog();
             if (nationalID_FileDialog.FileName != "")
             {
+
                 idPath.Text = nationalID_FileDialog.FileName;
+
+
+
             }
         }
 

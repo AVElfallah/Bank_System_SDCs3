@@ -10,6 +10,8 @@ namespace Bank_System.view
         {
             InitializeComponent();
 
+            a_name.Text = model.systemData.adminInfo.adminName;
+            a_role.Text = model.systemData.adminInfo.adminRole;
             showTimer = new Timer();
             showTimer.Interval = 200;
             showTimer.Tick += ShowTimer_Tick;
@@ -48,7 +50,7 @@ namespace Bank_System.view
         private void singOut_Click(object sender, EventArgs e)
         {
             Login login = new Login();
-            this.Close();
+            this.Hide();
             login.Show();
 
         }
@@ -108,6 +110,11 @@ namespace Bank_System.view
         {
             newCompanyLoan companyLoan = new newCompanyLoan();
             companyLoan.ShowDialog();
+        }
+
+        private void role_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

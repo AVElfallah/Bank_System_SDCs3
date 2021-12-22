@@ -1,4 +1,6 @@
-﻿namespace Bank_System.model
+﻿using System;
+
+namespace Bank_System.model
 {
     public class personalAccount
     {
@@ -7,17 +9,27 @@
              name,
              national,
              nationalId,
-             nationalIdPhotoPath,
+
              job,
-             tradeReportPhotoPath,
+
 
              crruncy,
              accountReport,
              notes;
-
+        public byte[] nationalIdPhoto
+        {
+            get;
+            set;
+        }
+        public byte[] tradeReportPhoto
+        {
+            get;
+            set;
+        }
         public double cash;
         public bool isHaveVisa, isHaveCheque;
         public Visa accountVisa;
+        public DateTime date;
 
 
     }

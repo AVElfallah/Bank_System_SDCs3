@@ -5,12 +5,25 @@ namespace Bank_System.viewmodel
 {
     public partial class createCard : Form
     {
-        model.Visa visa;
+        public bool isnewVisa = false;
+        private static model.Visa visa;
+
         public createCard()
         {
             InitializeComponent();
             visa = new model.Visa();
         }
+        public static model.Visa getNewVisa()
+        {
+            var dailog = new createCard();
+            dailog.isnewVisa = true;
+            dailog.ShowDialog();
+            if (dailog.textBox1.Text != "" && dailog.textBox2.Text != "" && dailog.textBox3.Text != "")
+                return visa;
+            return null;
+        }
+
+
 
         private void createCard_Load(object sender, EventArgs e)
         {
@@ -39,7 +52,7 @@ namespace Bank_System.viewmodel
 
         private void button2_Click(object sender, EventArgs e)
         {
-            customUserAccountPreview.personal.accountVisa = visa;
+
             this.Hide();
         }
     }

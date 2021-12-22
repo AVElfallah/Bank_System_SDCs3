@@ -11,29 +11,21 @@ namespace Bank_System.viewmodel
         {
             InitializeComponent();
             personal = account;
-            if (account.isHaveVisa)
-            {
-                while (personal.accountVisa == null)
-                {
-                    createCard createCard = new createCard();
-                    createCard.ShowDialog();
-                }
-
-
-            }
+  
 
             accountNumber.Text = account.accountNumber;
             this.accountName.Text = account.name;
             this.nation.Text = account.national;
             this.nationalId.Text = account.nationalId;
-            this.nationalIdPhoto.Image = new Bitmap(account.nationalIdPhotoPath);
+            this.nationalIdPhoto.Image = model.photo.decryption(account.nationalIdPhoto);
             this.job.Text = account.job;
-            this.tradeReportPhoto.Image = new Bitmap(account.tradeReportPhotoPath);
+            this.tradeReportPhoto.Image = model.photo.decryption(account.tradeReportPhoto);
 
             this.crruncy.Text = account.crruncy;
             this.accountReport.Text = account.accountReport;
             this.notes.Text = account.notes;
             this.cashAccount.Text = account.cash.ToString();
+            textBox1.Text = new model.ToWord(account.cash, account.crruncy).ConvertToArabic();
             if (account.isHaveCheque)
             {
                 this.isHaveChque.Text = "نعم";
@@ -68,6 +60,38 @@ namespace Bank_System.viewmodel
         private void printReport_Click(object sender, EventArgs e)
         {
             MessageBox.Show("تمت طباعة التقرير بنجاح");
+        }
+
+        private void end_Click(object sender, EventArgs e)
+        {
+            if (personal.accountVisa != null)
+            {
+                if (db.personalAccountDB.addAccountWithVisa(personal))
+                {
+
+                    MessageBox.Show("تم انشاء الحساب بشكل سليم");
+
+                    model.systemData.navigator.formStore.Pop().Hide();
+                    this.Hide();
+                }
+            }
+            else if (db.personalAccountDB.addAccountWithoutVisa(personal))
+            {
+
+                MessageBox.Show("تم انشاء الحساب بشكل سليم");
+
+                model.systemData.navigator.formStore.Pop().Hide();
+                this.Hide();
+            }
+        }
+
+        private void edit_Click(object sender, EventArgs e)
+        {
+
+            var edit = model.systemData.navigator.formStore.Pop();
+            edit.Visible = true;
+
+            this.Hide();
         }
     }
 }

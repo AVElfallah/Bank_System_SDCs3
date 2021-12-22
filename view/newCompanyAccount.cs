@@ -24,11 +24,13 @@ namespace Bank_System.view
             company.accountReport = accountReport.Text;
             company.cash = double.Parse(cash.Text);
             company.notes = richNote.Text;
-            company.financialIdPhotoPath = financialID_FileDialog.FileName;
-            company.tradeReportPhotoPath = tradeReport_FileDialog.FileName;
-
+            company.financialIdPhoto = model.photo.encryption(financialID_FileDialog.FileName);
+            company.tradeReportPhoto = model.photo.encryption(tradeReport_FileDialog.FileName);
+            model.systemData.navigator.formStore.Push(this);
             viewmodel.customCompanyAccountPreview customCompany = new viewmodel.customCompanyAccountPreview(company);
+            this.Visible = false;
             customCompany.ShowDialog();
+            
         }
 
         private void pictureBox1_Click(object sender, System.EventArgs e)
@@ -73,7 +75,7 @@ namespace Bank_System.view
 
         private void cash_TextChanged(object sender, System.EventArgs e)
         {
-            string str = "{}";
+
         }
     }
 }

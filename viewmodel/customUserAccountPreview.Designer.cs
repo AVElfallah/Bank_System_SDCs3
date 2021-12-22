@@ -59,6 +59,7 @@
             this.printReport = new System.Windows.Forms.Button();
             this.edit = new System.Windows.Forms.Button();
             this.end = new System.Windows.Forms.Button();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.nationalIdPhoto)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tradeReportPhoto)).BeginInit();
             this.SuspendLayout();
@@ -299,7 +300,7 @@
             // 
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.Location = new System.Drawing.Point(162, 675);
+            this.label12.Location = new System.Drawing.Point(162, 691);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(83, 24);
             this.label12.TabIndex = 40;
@@ -310,7 +311,7 @@
             this.notes.BackColor = System.Drawing.SystemColors.AppWorkspace;
             this.notes.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.notes.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.notes.Location = new System.Drawing.Point(12, 702);
+            this.notes.Location = new System.Drawing.Point(12, 718);
             this.notes.Name = "notes";
             this.notes.ReadOnly = true;
             this.notes.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
@@ -322,7 +323,7 @@
             // 
             this.label13.AutoSize = true;
             this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.Location = new System.Drawing.Point(162, 854);
+            this.label13.Location = new System.Drawing.Point(162, 860);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(138, 24);
             this.label13.TabIndex = 42;
@@ -332,7 +333,7 @@
             // 
             this.isHaveChque.BackColor = System.Drawing.Color.SpringGreen;
             this.isHaveChque.ForeColor = System.Drawing.Color.Maroon;
-            this.isHaveChque.Location = new System.Drawing.Point(103, 854);
+            this.isHaveChque.Location = new System.Drawing.Point(103, 860);
             this.isHaveChque.Name = "isHaveChque";
             this.isHaveChque.ReadOnly = true;
             this.isHaveChque.Size = new System.Drawing.Size(60, 26);
@@ -344,7 +345,7 @@
             // 
             this.isHaveVisa.BackColor = System.Drawing.Color.SpringGreen;
             this.isHaveVisa.ForeColor = System.Drawing.Color.Maroon;
-            this.isHaveVisa.Location = new System.Drawing.Point(103, 887);
+            this.isHaveVisa.Location = new System.Drawing.Point(103, 893);
             this.isHaveVisa.Name = "isHaveVisa";
             this.isHaveVisa.ReadOnly = true;
             this.isHaveVisa.Size = new System.Drawing.Size(60, 26);
@@ -356,7 +357,7 @@
             // 
             this.label14.AutoSize = true;
             this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.Location = new System.Drawing.Point(174, 889);
+            this.label14.Location = new System.Drawing.Point(174, 895);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(126, 24);
             this.label14.TabIndex = 44;
@@ -369,7 +370,7 @@
             this.printReport.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.printReport.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.printReport.ForeColor = System.Drawing.Color.Snow;
-            this.printReport.Location = new System.Drawing.Point(12, 946);
+            this.printReport.Location = new System.Drawing.Point(12, 931);
             this.printReport.Name = "printReport";
             this.printReport.Size = new System.Drawing.Size(362, 39);
             this.printReport.TabIndex = 46;
@@ -384,13 +385,14 @@
             this.edit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.edit.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.edit.ForeColor = System.Drawing.Color.Snow;
-            this.edit.Location = new System.Drawing.Point(12, 1003);
+            this.edit.Location = new System.Drawing.Point(12, 986);
             this.edit.Name = "edit";
             this.edit.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.edit.Size = new System.Drawing.Size(362, 39);
             this.edit.TabIndex = 47;
             this.edit.Text = "تعديل البيانات";
             this.edit.UseVisualStyleBackColor = false;
+            this.edit.Click += new System.EventHandler(this.edit_Click);
             // 
             // end
             // 
@@ -399,13 +401,26 @@
             this.end.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.end.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.end.ForeColor = System.Drawing.Color.Snow;
-            this.end.Location = new System.Drawing.Point(12, 1058);
+            this.end.Location = new System.Drawing.Point(12, 1041);
+            this.end.Margin = new System.Windows.Forms.Padding(3, 3, 3, 30);
             this.end.Name = "end";
             this.end.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.end.Size = new System.Drawing.Size(362, 39);
             this.end.TabIndex = 48;
             this.end.Text = "انهاء المعاينة وحفظ";
             this.end.UseVisualStyleBackColor = false;
+            this.end.Click += new System.EventHandler(this.end_Click);
+            // 
+            // textBox1
+            // 
+            this.textBox1.BackColor = System.Drawing.SystemColors.WindowFrame;
+            this.textBox1.Location = new System.Drawing.Point(12, 662);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.ReadOnly = true;
+            this.textBox1.Size = new System.Drawing.Size(362, 26);
+            this.textBox1.TabIndex = 49;
+            this.textBox1.Text = "t";
+            this.textBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // customUserAccountPreview
             // 
@@ -414,6 +429,7 @@
             this.AutoScroll = true;
             this.BackColor = System.Drawing.Color.Gray;
             this.ClientSize = new System.Drawing.Size(409, 492);
+            this.Controls.Add(this.textBox1);
             this.Controls.Add(this.end);
             this.Controls.Add(this.edit);
             this.Controls.Add(this.printReport);
@@ -449,7 +465,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Margin = new System.Windows.Forms.Padding(5);
             this.Name = "customUserAccountPreview";
-            this.Padding = new System.Windows.Forms.Padding(0, 0, 0, 20);
+            this.Padding = new System.Windows.Forms.Padding(0, 0, 0, 40);
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "معاينة حساب افراد";
             ((System.ComponentModel.ISupportInitialize)(this.nationalIdPhoto)).EndInit();
@@ -492,5 +508,6 @@
         private System.Windows.Forms.Button printReport;
         private System.Windows.Forms.Button edit;
         private System.Windows.Forms.Button end;
+        private System.Windows.Forms.TextBox textBox1;
     }
 }

@@ -9,12 +9,22 @@ namespace Bank_System.model
         public String
               name,
               accountNumber,
-              tradeReportPhotoPath,
-              financialIdPhotoPath,
               crruncy,
               accountReport,
               notes
               ;
+        public DateTime date;
+        public byte[] tradeReportPhoto
+        {
+            get;
+            set;
+        }
+        public byte[] financialIdPhoto
+        {
+            get;
+            set;
+
+        }
         public double
                 cash;
         public bool

@@ -19,6 +19,18 @@ namespace Bank_System.viewmodel
             this.Text = filepath;
 
         }
+        public previewIMGDialog(Image image)
+        {
+            InitializeComponent();
+            var si = image.Size;
+            si.Height += 70;
+            this.Size = si;
+            filePath.Text = image.Width.ToString();
+            pictureBox1.Size = image.Size;
+            pictureBox1.Image = image;
+
+
+        }
 
         private void previewIMGDialog_Load(object sender, EventArgs e)
         {

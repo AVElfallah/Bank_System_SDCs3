@@ -31,12 +31,12 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Login));
             this.xuiFormDesign1 = new XanderUI.XUIFormDesign();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.passWord = new System.Windows.Forms.TextBox();
-            this.userName = new System.Windows.Forms.TextBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.xuiButton1 = new XanderUI.XUIButton();
+            this.password = new System.Windows.Forms.TextBox();
+            this.userName = new System.Windows.Forms.TextBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.xuiFormDesign1.WorkingArea.SuspendLayout();
             this.xuiFormDesign1.SuspendLayout();
@@ -67,7 +67,7 @@
             this.xuiFormDesign1.WorkingArea.Controls.Add(this.label2);
             this.xuiFormDesign1.WorkingArea.Controls.Add(this.label1);
             this.xuiFormDesign1.WorkingArea.Controls.Add(this.xuiButton1);
-            this.xuiFormDesign1.WorkingArea.Controls.Add(this.passWord);
+            this.xuiFormDesign1.WorkingArea.Controls.Add(this.password);
             this.xuiFormDesign1.WorkingArea.Controls.Add(this.userName);
             this.xuiFormDesign1.WorkingArea.Controls.Add(this.pictureBox1);
             this.xuiFormDesign1.WorkingArea.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -76,6 +76,18 @@
             this.xuiFormDesign1.WorkingArea.Name = "WorkingArea";
             this.xuiFormDesign1.WorkingArea.Size = new System.Drawing.Size(311, 359);
             this.xuiFormDesign1.WorkingArea.TabIndex = 0;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.BackColor = System.Drawing.SystemColors.Window;
+            this.pictureBox2.Image = global::Bank_System.Properties.Resources.eyepreview;
+            this.pictureBox2.Location = new System.Drawing.Point(28, 250);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(37, 21);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox2.TabIndex = 4;
+            this.pictureBox2.TabStop = false;
+            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
             // 
             // label2
             // 
@@ -101,39 +113,6 @@
             this.label1.TabIndex = 3;
             this.label1.Text = "اسم المستخدم";
             // 
-            // passWord
-            // 
-            this.passWord.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.passWord.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.passWord.Location = new System.Drawing.Point(23, 246);
-            this.passWord.Name = "passWord";
-            this.passWord.PasswordChar = '*';
-            this.passWord.Size = new System.Drawing.Size(260, 30);
-            this.passWord.TabIndex = 1;
-            this.passWord.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            // 
-            // userName
-            // 
-            this.userName.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.userName.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.userName.Location = new System.Drawing.Point(22, 174);
-            this.userName.Name = "userName";
-            this.userName.Size = new System.Drawing.Size(260, 30);
-            this.userName.TabIndex = 0;
-            this.userName.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.BackColor = System.Drawing.SystemColors.Window;
-            this.pictureBox2.Image = global::Bank_System.Properties.Resources.eyepreview;
-            this.pictureBox2.Location = new System.Drawing.Point(28, 250);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(37, 21);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox2.TabIndex = 4;
-            this.pictureBox2.TabStop = false;
-            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
-            // 
             // xuiButton1
             // 
             this.xuiButton1.BackgroundColor = System.Drawing.SystemColors.WindowText;
@@ -155,6 +134,27 @@
             this.xuiButton1.TextColor = System.Drawing.Color.MediumSeaGreen;
             this.xuiButton1.Vertical_Alignment = System.Drawing.StringAlignment.Center;
             this.xuiButton1.Click += new System.EventHandler(this.xuiButton1_Click);
+            // 
+            // password
+            // 
+            this.password.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.password.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.password.Location = new System.Drawing.Point(23, 246);
+            this.password.Name = "password";
+            this.password.PasswordChar = '*';
+            this.password.Size = new System.Drawing.Size(260, 30);
+            this.password.TabIndex = 1;
+            this.password.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // userName
+            // 
+            this.userName.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.userName.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.userName.Location = new System.Drawing.Point(22, 174);
+            this.userName.Name = "userName";
+            this.userName.Size = new System.Drawing.Size(260, 30);
+            this.userName.TabIndex = 0;
+            this.userName.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // pictureBox1
             // 
@@ -192,7 +192,7 @@
 
         private XanderUI.XUIFormDesign xuiFormDesign1;
         private XanderUI.XUIButton xuiButton1;
-        private System.Windows.Forms.TextBox passWord;
+        private System.Windows.Forms.TextBox password;
         private System.Windows.Forms.TextBox userName;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label2;

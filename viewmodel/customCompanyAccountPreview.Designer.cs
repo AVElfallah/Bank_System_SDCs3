@@ -49,6 +49,7 @@
             this.end = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
+            this.arabic_cash = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.tradeReportPhoto)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.financialIdPhoto)).BeginInit();
             this.SuspendLayout();
@@ -254,6 +255,7 @@
             this.edit.TabIndex = 47;
             this.edit.Text = "تعديل البيانات";
             this.edit.UseVisualStyleBackColor = false;
+            this.edit.Click += new System.EventHandler(this.edit_Click);
             // 
             // end
             // 
@@ -269,6 +271,7 @@
             this.end.TabIndex = 48;
             this.end.Text = "انهاء المعاينة وحفظ";
             this.end.UseVisualStyleBackColor = false;
+            this.end.Click += new System.EventHandler(this.end_Click);
             // 
             // label5
             // 
@@ -290,6 +293,16 @@
             this.label6.TabIndex = 50;
             this.label6.Text = "البطاقة الضريبية";
             // 
+            // arabic_cash
+            // 
+            this.arabic_cash.BackColor = System.Drawing.SystemColors.WindowFrame;
+            this.arabic_cash.Location = new System.Drawing.Point(12, 666);
+            this.arabic_cash.Name = "arabic_cash";
+            this.arabic_cash.ReadOnly = true;
+            this.arabic_cash.Size = new System.Drawing.Size(362, 26);
+            this.arabic_cash.TabIndex = 51;
+            this.arabic_cash.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
             // customCompanyAccountPreview
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 20F);
@@ -297,6 +310,7 @@
             this.AutoScroll = true;
             this.BackColor = System.Drawing.Color.Gray;
             this.ClientSize = new System.Drawing.Size(409, 492);
+            this.Controls.Add(this.arabic_cash);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.end);
@@ -355,5 +369,6 @@
         private System.Windows.Forms.Button end;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.TextBox arabic_cash;
     }
 }
