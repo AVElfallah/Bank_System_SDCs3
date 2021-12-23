@@ -11,7 +11,7 @@ namespace Bank_System.viewmodel
         {
             InitializeComponent();
             personal = account;
-  
+
 
             accountNumber.Text = account.accountNumber;
             this.accountName.Text = account.name;

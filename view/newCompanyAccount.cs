@@ -30,7 +30,7 @@ namespace Bank_System.view
             viewmodel.customCompanyAccountPreview customCompany = new viewmodel.customCompanyAccountPreview(company);
             this.Visible = false;
             customCompany.ShowDialog();
-            
+
         }
 
         private void pictureBox1_Click(object sender, System.EventArgs e)

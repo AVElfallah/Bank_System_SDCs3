@@ -17,7 +17,7 @@ namespace Bank_System.viewmodel
             crruncy.Text = accountPreview.crruncy;
             cashAccount.Text = accountPreview.cash.ToString();
             notes.Text = accountPreview.notes;
-            arabic_cash.Text = new model.ToWord(accountPreview.cash,accountPreview.crruncy).ConvertToArabic();
+            arabic_cash.Text = new model.ToWord(accountPreview.cash, accountPreview.crruncy).ConvertToArabic();
             try
             {
                 tradeReportPhoto.Image = model.photo.decryption(account.tradeReportPhoto);
@@ -49,13 +49,14 @@ namespace Bank_System.viewmodel
 
         private void end_Click(object sender, EventArgs e)
         {
-            if (db.companyAccountDB.addAccount(account)) {
+            if (db.companyAccountDB.addAccount(account))
+            {
                 MessageBox.Show("تم اضافة الحساب بنجاح");
                 model.systemData.navigator.formStore.Pop().Close();
                 this.Close();
 
             }
-           
+
 
         }
 

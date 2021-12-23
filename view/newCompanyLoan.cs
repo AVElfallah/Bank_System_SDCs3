@@ -7,42 +7,26 @@ namespace Bank_System.view
 
         #region constans
         DateTime endDATE = new DateTime();
+        model.companyAccount companyAccount;
 
         #endregion
 
         public newCompanyLoan()
         {
             InitializeComponent();
-            groupBox3.Location = new System.Drawing.Point(13, 289);
-        }
-
-
-
-
-
-        private void totalCostOfLoan_TextChanged_1(object sender, EventArgs e)
-
-        {
-            checkAndChangeValues();
-
-
 
         }
 
+        #region Tab1Region
         private void button3_Click(object sender, EventArgs e)
         {
-            if (tabControl1.SelectedIndex == 0)
+            if (validationNormalCase())
             {
                 var account = new model.LoanClasses.companyWithAccountInOurBankLoan();
-                var company = new model.companyAccount();
-                company.name = accountNumber.Text;
-                company.crruncy = crruncy.Text;
 
-                company.accountNumber = accountNumber.Text;
-                //  company.tradeReportPhotoPath = tradeReportImge.Image.ToString();
-                //company.financialIdPhotoPath = taxIDImag.Image.ToString();
+
                 account.loanID = model.RandomNumbers.accountNumberGen();
-                account.companyAccount = company;
+                account.companyAccount = companyAccount;
                 account.installmentsNumber = double.Parse(installmentsNumber.Text);
                 account.installmentsSystem = installmentsPaymentsSys.Text;
                 account.installmentValue = double.Parse(installmentValue.Text);
@@ -53,13 +37,109 @@ namespace Bank_System.view
                     double.Parse(loanValue.Text) * (double.Parse(binfetPrecentage.Text) / 100);
                 account.benfitPrecent = double.Parse(binfetPrecentage.Text);
                 account.loanEndDate = endDATE;
-                var preview = new viewmodel.loanCompanyReportPreview(account);
+                account.fieldPreviewNote = fieldPreviewNotes.Text;
+                account.fieldPreviewImage = model.photo.encryption(fieldPreview_FileDialog.FileName);
+                var preview = new viewmodel.loanNormalCaseCompanyRPreview(account);
                 preview.ShowDialog();
 
 
             }
+            else
+            {
+                System.Windows.Forms.MessageBox.Show("تأكد من اكمالك للبيانات بشكل صحيح");
+            }
 
         }
+
+        private void installmentsNumber_TextChanged(object sender, EventArgs e)
+        {
+            checkAndChangeValues();
+            calcEndDate();
+        }
+
+        private void installmentsPaymentsSys_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            checkAndChangeValues();
+            calcEndDate();
+        }
+
+        private void binfetPrecentage_TextChanged(object sender, EventArgs e)
+        {
+            calcinstallmentWithBinfet();
+        }
+
+        private void totalCostOfLoan_TextChanged_1(object sender, EventArgs e)
+
+        {
+            checkAndChangeValues();
+
+
+
+        }
+        private void button1_Click(object sender, EventArgs e)
+        {
+            companyAccount = null;
+            if (accountNumber.Text != "")
+            {
+                companyAccount = db.companyAccountDB.getAccountById(accountNumber.Text);
+                if (companyAccount != null)
+                {
+                    tradeReportImge.Image = model.photo.decryption(companyAccount.tradeReportPhoto);
+                    taxIDImag.Image = model.photo.decryption(companyAccount.financialIdPhoto);
+                    compName.Text = companyAccount.name;
+                    crruncy.Text = companyAccount.crruncy;
+                    cash.Text = companyAccount.cash.ToString();
+                    cash_in_arabic.Text = new model.ToWord(companyAccount.cash, companyAccount.crruncy).ConvertToArabic();
+                    crlbl.Text = companyAccount.crruncy;
+                    p1.Visible = true;
+                    p2.Visible = true;
+                }
+                else
+                {
+                    System.Windows.Forms.MessageBox.Show("لاوجود لمثل هذا الحساب بالنظام");
+                    p1.Visible = false;
+                    p2.Visible = false;
+                }
+            }
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            newCompanyAccount account=new newCompanyAccount();
+            this.Hide();
+            account.ShowDialog();
+            
+        }
+
+        private void pictureBox3_Click(object sender, EventArgs e)
+        {
+            fieldPreview_FileDialog.ShowDialog();
+            if (fieldPreview_FileDialog.FileName != "")
+            {
+
+                fieldPreviewpath.Text = fieldPreview_FileDialog.FileName;
+
+            }
+        }
+
+        private void pictureBox4_Click(object sender, EventArgs e)
+        {
+            if (fieldPreview_FileDialog.FileName != "")
+            {
+
+                var dialog = new viewmodel.previewIMGDialog(fieldPreview_FileDialog.FileName, new System.Drawing.Bitmap(fieldPreview_FileDialog.FileName));
+                dialog.ShowDialog();
+            }
+        }
+
+
+
+        #endregion
+
+
+
+
+
         private void pictureBox2_Click(object sender, EventArgs e)
         {
             tradeReport_FileDialog.ShowDialog();
@@ -88,22 +168,6 @@ namespace Bank_System.view
             }
         }
 
-        private void installmentsNumber_TextChanged(object sender, EventArgs e)
-        {
-            checkAndChangeValues();
-            calcEndDate();
-        }
-
-        private void installmentsPaymentsSys_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            checkAndChangeValues();
-            calcEndDate();
-        }
-
-        private void binfetPrecentage_TextChanged(object sender, EventArgs e)
-        {
-            calcinstallmentWithBinfet();
-        }
 
         private void pictureBox5_Click(object sender, EventArgs e)
         {
@@ -156,34 +220,14 @@ namespace Bank_System.view
             }
         }
 
-        private void pictureBox3_Click(object sender, EventArgs e)
-        {
-            fieldPreview_FileDialog.ShowDialog();
-            if (fieldPreview_FileDialog.FileName != "")
-            {
-
-                fieldPreviewpath.Text = fieldPreview_FileDialog.FileName;
-
-            }
-        }
-
-        private void pictureBox4_Click(object sender, EventArgs e)
-        {
-            if (fieldPreview_FileDialog.FileName != "")
-            {
-
-                var dialog = new viewmodel.previewIMGDialog(fieldPreview_FileDialog.FileName, new System.Drawing.Bitmap(fieldPreview_FileDialog.FileName));
-                dialog.ShowDialog();
-            }
-        }
         private void button4_Click(object sender, EventArgs e)
         {
             if (validationCaseHaveAnotherBankAccount())
             {
 
-                System.Windows.Forms.MessageBox.Show("testDone");
+
             }
-            else { System.Windows.Forms.MessageBox.Show("test"); }
+            else { System.Windows.Forms.MessageBox.Show("تأكد من اكمالك للبيانات بشكل صحيح"); }
         }
         private void loanValue2_TextChanged(object sender, EventArgs e)
         {
@@ -209,11 +253,7 @@ namespace Bank_System.view
             calcEndDate2();
         }
 
-        private void checkBox1_CheckedChanged(object sender, EventArgs e)
-        {
-            panel1.Visible = checkBox1.Checked;
-            groupBox3.Location = !checkBox1.Checked ? new System.Drawing.Point(13, 289) : new System.Drawing.Point(13, 453);
-        }
+     
 
         #region methods
         //validation
@@ -262,7 +302,22 @@ namespace Bank_System.view
             }
             return false;
         }
+        bool validationNormalCase()
+        {
+            if (companyAccount != null &&
+                fieldPreviewNotes.Text != "" &&
+                fieldPreview_FileDialog.FileName != "" &&
+                loanValue.Text != "" &&
+                installmentsNumber.Text != "" &&
+                installmentsPaymentsSys.Text != ""
+                && binfetPrecentage.Text != ""
+                )
+            {
+                return true;
+            }
 
+            return false;
+        }
         //equation
         void calcEndDate2()
         {
@@ -393,8 +448,19 @@ namespace Bank_System.view
 
 
 
+
+
         #endregion
 
+        private void checkBox1_CheckedChanged_1(object sender, EventArgs e)
+        {
+            panel1.Visible = checkBox1.Checked;
+            pictureBox11.Visible = !checkBox1.Checked;
+        }
 
+        private void crruncy2_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            lbl.Text = crruncy2.Text;
+        }
     }
 }

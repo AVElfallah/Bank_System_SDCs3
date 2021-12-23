@@ -61,13 +61,13 @@ namespace Bank_System.view
             refreshVisa(personal.accountVisa != null);
             if (personal.accountVisa != null)
             {
-               if( db.personalAccountDB.createNewVisaByID(personal.accountNumber, personal.accountVisa))
+                if (db.personalAccountDB.createNewVisaByID(personal.accountNumber, personal.accountVisa))
                 {
                     MessageBox.Show("تم حفظ بيانات البطاقة بنجاح");
                 }
             }
 
-           
+
         }
     }
 }

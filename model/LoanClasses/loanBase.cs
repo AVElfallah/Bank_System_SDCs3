@@ -30,7 +30,7 @@ namespace Bank_System.model.LoanClasses
             get;
             set;
         }
-        public String Paht { get; set; }
+      
         //تفاصيل وملاحظات المعاينة الميدانية
         public String fieldPreviewNote { get; set; }
 

@@ -65,25 +65,25 @@ namespace Bank_System.model
 
         private string GetdoubleValue(string doublePart)
         {
-           
-                string result = String.Empty;
 
-                if (Currency.PartPrecision != doublePart.Length)
-                {
-                    result = String.Format("{0}.{1}", doublePart.Substring(0, Currency.PartPrecision), doublePart.Substring(Currency.PartPrecision, doublePart.Length - Currency.PartPrecision));
+            string result = String.Empty;
 
-                    result = (Math.Round(Convert.ToDouble(result))).ToString();
-                }
-                else
-                    result = doublePart;
+            if (Currency.PartPrecision != doublePart.Length)
+            {
+                result = String.Format("{0}.{1}", doublePart.Substring(0, Currency.PartPrecision), doublePart.Substring(Currency.PartPrecision, doublePart.Length - Currency.PartPrecision));
 
-                for (int i = 0; i < Currency.PartPrecision - result.Length; i++)
-                {
-                    result += "0";
-                }
+                result = (Math.Round(Convert.ToDouble(result))).ToString();
+            }
+            else
+                result = doublePart;
 
-                return result;
-     
+            for (int i = 0; i < Currency.PartPrecision - result.Length; i++)
+            {
+                result += "0";
+            }
+
+            return result;
+
         }
 
 

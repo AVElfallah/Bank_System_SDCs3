@@ -31,7 +31,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(newCompanyLoan));
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.companyHasAccount = new System.Windows.Forms.TabPage();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.p2 = new System.Windows.Forms.GroupBox();
             this.label18 = new System.Windows.Forms.Label();
             this.endD = new System.Windows.Forms.TextBox();
             this.installmentWithBinfet = new System.Windows.Forms.TextBox();
@@ -40,7 +40,7 @@
             this.label16 = new System.Windows.Forms.Label();
             this.binfetPrecentage = new System.Windows.Forms.TextBox();
             this.button3 = new System.Windows.Forms.Button();
-            this.label15 = new System.Windows.Forms.Label();
+            this.crlbl = new System.Windows.Forms.Label();
             this.installmentValue = new System.Windows.Forms.TextBox();
             this.label14 = new System.Windows.Forms.Label();
             this.installmentsPaymentsSys = new System.Windows.Forms.ComboBox();
@@ -57,7 +57,10 @@
             this.fieldPreviewpath = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.button2 = new System.Windows.Forms.Button();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.p1 = new System.Windows.Forms.GroupBox();
+            this.cash_in_arabic = new System.Windows.Forms.TextBox();
+            this.cash = new System.Windows.Forms.TextBox();
+            this.label36 = new System.Windows.Forms.Label();
             this.crruncy = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.taxIDImag = new System.Windows.Forms.PictureBox();
@@ -70,6 +73,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.accountNumber = new System.Windows.Forms.TextBox();
             this.companyNotHaveAccount = new System.Windows.Forms.TabPage();
+            this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.label25 = new System.Windows.Forms.Label();
             this.endDate2 = new System.Windows.Forms.TextBox();
@@ -79,7 +83,7 @@
             this.label28 = new System.Windows.Forms.Label();
             this.binfetPrecentage2 = new System.Windows.Forms.TextBox();
             this.button4 = new System.Windows.Forms.Button();
-            this.label29 = new System.Windows.Forms.Label();
+            this.lbl = new System.Windows.Forms.Label();
             this.installmentValue2 = new System.Windows.Forms.TextBox();
             this.label30 = new System.Windows.Forms.Label();
             this.installmentsSystem2 = new System.Windows.Forms.ComboBox();
@@ -103,7 +107,6 @@
             this.pictureBox8 = new System.Windows.Forms.PictureBox();
             this.label9 = new System.Windows.Forms.Label();
             this.bankAccountReportPath = new System.Windows.Forms.TextBox();
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.crruncy2 = new System.Windows.Forms.ComboBox();
             this.label19 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
@@ -116,16 +119,17 @@
             this.tradeReportPath = new System.Windows.Forms.TextBox();
             this.label22 = new System.Windows.Forms.Label();
             this.companyName2 = new System.Windows.Forms.TextBox();
+            this.pictureBox11 = new System.Windows.Forms.PictureBox();
             this.fieldPreview_FileDialog = new System.Windows.Forms.OpenFileDialog();
             this.tradeReport_FileDialog = new System.Windows.Forms.OpenFileDialog();
             this.financialID_FileDialog = new System.Windows.Forms.OpenFileDialog();
             this.bankAccountReport = new System.Windows.Forms.OpenFileDialog();
             this.tabControl1.SuspendLayout();
             this.companyHasAccount.SuspendLayout();
-            this.groupBox2.SuspendLayout();
+            this.p2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
-            this.groupBox1.SuspendLayout();
+            this.p1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.taxIDImag)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tradeReportImge)).BeginInit();
             this.companyNotHaveAccount.SuspendLayout();
@@ -139,6 +143,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).BeginInit();
             this.SuspendLayout();
             // 
             // tabControl1
@@ -162,10 +167,10 @@
             this.companyHasAccount.BackColor = System.Drawing.Color.Gray;
             this.companyHasAccount.BackgroundImage = global::Bank_System.Properties.Resources.bank;
             this.companyHasAccount.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.companyHasAccount.Controls.Add(this.groupBox2);
+            this.companyHasAccount.Controls.Add(this.p2);
             this.companyHasAccount.Controls.Add(this.label7);
             this.companyHasAccount.Controls.Add(this.button2);
-            this.companyHasAccount.Controls.Add(this.groupBox1);
+            this.companyHasAccount.Controls.Add(this.p1);
             this.companyHasAccount.Controls.Add(this.button1);
             this.companyHasAccount.Controls.Add(this.label1);
             this.companyHasAccount.Controls.Add(this.accountNumber);
@@ -177,36 +182,37 @@
             this.companyHasAccount.TabIndex = 0;
             this.companyHasAccount.Text = "قرض إتماني لحساب موجود بالفعل";
             // 
-            // groupBox2
+            // p2
             // 
-            this.groupBox2.Controls.Add(this.label18);
-            this.groupBox2.Controls.Add(this.endD);
-            this.groupBox2.Controls.Add(this.installmentWithBinfet);
-            this.groupBox2.Controls.Add(this.label11);
-            this.groupBox2.Controls.Add(this.label17);
-            this.groupBox2.Controls.Add(this.label16);
-            this.groupBox2.Controls.Add(this.binfetPrecentage);
-            this.groupBox2.Controls.Add(this.button3);
-            this.groupBox2.Controls.Add(this.label15);
-            this.groupBox2.Controls.Add(this.installmentValue);
-            this.groupBox2.Controls.Add(this.label14);
-            this.groupBox2.Controls.Add(this.installmentsPaymentsSys);
-            this.groupBox2.Controls.Add(this.label13);
-            this.groupBox2.Controls.Add(this.label12);
-            this.groupBox2.Controls.Add(this.installmentsNumber);
-            this.groupBox2.Controls.Add(this.label10);
-            this.groupBox2.Controls.Add(this.loanValue);
-            this.groupBox2.Controls.Add(this.fieldPreviewNotes);
-            this.groupBox2.Controls.Add(this.label6);
-            this.groupBox2.Controls.Add(this.pictureBox3);
-            this.groupBox2.Controls.Add(this.pictureBox4);
-            this.groupBox2.Controls.Add(this.label5);
-            this.groupBox2.Controls.Add(this.fieldPreviewpath);
-            this.groupBox2.Location = new System.Drawing.Point(6, 631);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(398, 667);
-            this.groupBox2.TabIndex = 43;
-            this.groupBox2.TabStop = false;
+            this.p2.Controls.Add(this.label18);
+            this.p2.Controls.Add(this.endD);
+            this.p2.Controls.Add(this.installmentWithBinfet);
+            this.p2.Controls.Add(this.label11);
+            this.p2.Controls.Add(this.label17);
+            this.p2.Controls.Add(this.label16);
+            this.p2.Controls.Add(this.binfetPrecentage);
+            this.p2.Controls.Add(this.button3);
+            this.p2.Controls.Add(this.crlbl);
+            this.p2.Controls.Add(this.installmentValue);
+            this.p2.Controls.Add(this.label14);
+            this.p2.Controls.Add(this.installmentsPaymentsSys);
+            this.p2.Controls.Add(this.label13);
+            this.p2.Controls.Add(this.label12);
+            this.p2.Controls.Add(this.installmentsNumber);
+            this.p2.Controls.Add(this.label10);
+            this.p2.Controls.Add(this.loanValue);
+            this.p2.Controls.Add(this.fieldPreviewNotes);
+            this.p2.Controls.Add(this.label6);
+            this.p2.Controls.Add(this.pictureBox3);
+            this.p2.Controls.Add(this.pictureBox4);
+            this.p2.Controls.Add(this.label5);
+            this.p2.Controls.Add(this.fieldPreviewpath);
+            this.p2.Location = new System.Drawing.Point(6, 637);
+            this.p2.Name = "p2";
+            this.p2.Size = new System.Drawing.Size(398, 667);
+            this.p2.TabIndex = 43;
+            this.p2.TabStop = false;
+            this.p2.Visible = false;
             // 
             // label18
             // 
@@ -294,15 +300,15 @@
             this.button3.UseVisualStyleBackColor = true;
             this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
-            // label15
+            // crlbl
             // 
-            this.label15.AutoSize = true;
-            this.label15.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label15.Location = new System.Drawing.Point(3, 302);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(118, 19);
-            this.label15.TabIndex = 67;
-            this.label15.Text = "الجنية المصري";
+            this.crlbl.AutoSize = true;
+            this.crlbl.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.crlbl.Location = new System.Drawing.Point(3, 302);
+            this.crlbl.Name = "crlbl";
+            this.crlbl.Size = new System.Drawing.Size(118, 19);
+            this.crlbl.TabIndex = 67;
+            this.crlbl.Text = "الجنية المصري";
             // 
             // installmentValue
             // 
@@ -482,33 +488,68 @@
             this.button2.TabIndex = 36;
             this.button2.Text = "إنشاء حساب مؤسسة ";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
-            // groupBox1
+            // p1
             // 
-            this.groupBox1.BackColor = System.Drawing.Color.Gray;
-            this.groupBox1.Controls.Add(this.crruncy);
-            this.groupBox1.Controls.Add(this.label8);
-            this.groupBox1.Controls.Add(this.taxIDImag);
-            this.groupBox1.Controls.Add(this.label4);
-            this.groupBox1.Controls.Add(this.tradeReportImge);
-            this.groupBox1.Controls.Add(this.label3);
-            this.groupBox1.Controls.Add(this.label2);
-            this.groupBox1.Controls.Add(this.compName);
-            this.groupBox1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.groupBox1.Location = new System.Drawing.Point(5, 105);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(398, 522);
-            this.groupBox1.TabIndex = 26;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "بيانات الحساب البنكي إكمال تلقائي";
+            this.p1.BackColor = System.Drawing.Color.Gray;
+            this.p1.Controls.Add(this.cash_in_arabic);
+            this.p1.Controls.Add(this.cash);
+            this.p1.Controls.Add(this.label36);
+            this.p1.Controls.Add(this.crruncy);
+            this.p1.Controls.Add(this.label8);
+            this.p1.Controls.Add(this.taxIDImag);
+            this.p1.Controls.Add(this.label4);
+            this.p1.Controls.Add(this.tradeReportImge);
+            this.p1.Controls.Add(this.label3);
+            this.p1.Controls.Add(this.label2);
+            this.p1.Controls.Add(this.compName);
+            this.p1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.p1.Location = new System.Drawing.Point(5, 105);
+            this.p1.Name = "p1";
+            this.p1.Size = new System.Drawing.Size(398, 532);
+            this.p1.TabIndex = 26;
+            this.p1.TabStop = false;
+            this.p1.Text = "بيانات الحساب البنكي إكمال تلقائي";
+            this.p1.Visible = false;
+            // 
+            // cash_in_arabic
+            // 
+            this.cash_in_arabic.BackColor = System.Drawing.SystemColors.WindowFrame;
+            this.cash_in_arabic.Location = new System.Drawing.Point(7, 493);
+            this.cash_in_arabic.Name = "cash_in_arabic";
+            this.cash_in_arabic.ReadOnly = true;
+            this.cash_in_arabic.Size = new System.Drawing.Size(383, 29);
+            this.cash_in_arabic.TabIndex = 46;
+            this.cash_in_arabic.Text = "t";
+            // 
+            // cash
+            // 
+            this.cash.BackColor = System.Drawing.SystemColors.WindowFrame;
+            this.cash.Location = new System.Drawing.Point(41, 458);
+            this.cash.Name = "cash";
+            this.cash.ReadOnly = true;
+            this.cash.Size = new System.Drawing.Size(296, 29);
+            this.cash.TabIndex = 45;
+            this.cash.Text = "t";
+            // 
+            // label36
+            // 
+            this.label36.AutoSize = true;
+            this.label36.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label36.Location = new System.Drawing.Point(334, 461);
+            this.label36.Name = "label36";
+            this.label36.Size = new System.Drawing.Size(60, 24);
+            this.label36.TabIndex = 44;
+            this.label36.Text = "الرصيد";
             // 
             // crruncy
             // 
             this.crruncy.BackColor = System.Drawing.SystemColors.WindowFrame;
-            this.crruncy.Location = new System.Drawing.Point(43, 442);
+            this.crruncy.Location = new System.Drawing.Point(41, 423);
             this.crruncy.Name = "crruncy";
             this.crruncy.ReadOnly = true;
-            this.crruncy.Size = new System.Drawing.Size(295, 29);
+            this.crruncy.Size = new System.Drawing.Size(297, 29);
             this.crruncy.TabIndex = 43;
             this.crruncy.Text = "t";
             // 
@@ -516,7 +557,7 @@
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(339, 444);
+            this.label8.Location = new System.Drawing.Point(339, 425);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(49, 24);
             this.label8.TabIndex = 42;
@@ -525,10 +566,12 @@
             // taxIDImag
             // 
             this.taxIDImag.BackColor = System.Drawing.Color.Gray;
+            this.taxIDImag.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.taxIDImag.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.taxIDImag.Location = new System.Drawing.Point(42, 268);
             this.taxIDImag.Name = "taxIDImag";
             this.taxIDImag.Size = new System.Drawing.Size(300, 130);
+            this.taxIDImag.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.taxIDImag.TabIndex = 28;
             this.taxIDImag.TabStop = false;
             // 
@@ -545,10 +588,12 @@
             // tradeReportImge
             // 
             this.tradeReportImge.BackColor = System.Drawing.Color.Gray;
+            this.tradeReportImge.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.tradeReportImge.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.tradeReportImge.Location = new System.Drawing.Point(42, 111);
             this.tradeReportImge.Name = "tradeReportImge";
             this.tradeReportImge.Size = new System.Drawing.Size(300, 130);
+            this.tradeReportImge.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.tradeReportImge.TabIndex = 28;
             this.tradeReportImge.TabStop = false;
             // 
@@ -590,12 +635,13 @@
             this.button1.TabIndex = 25;
             this.button1.Text = "بحث";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(145, -1);
+            this.label1.Location = new System.Drawing.Point(145, 2);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(248, 19);
             this.label1.TabIndex = 24;
@@ -616,9 +662,9 @@
             this.companyNotHaveAccount.BackColor = System.Drawing.Color.Gray;
             this.companyNotHaveAccount.BackgroundImage = global::Bank_System.Properties.Resources.bank;
             this.companyNotHaveAccount.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.companyNotHaveAccount.Controls.Add(this.checkBox1);
             this.companyNotHaveAccount.Controls.Add(this.groupBox3);
             this.companyNotHaveAccount.Controls.Add(this.panel1);
-            this.companyNotHaveAccount.Controls.Add(this.checkBox1);
             this.companyNotHaveAccount.Controls.Add(this.crruncy2);
             this.companyNotHaveAccount.Controls.Add(this.label19);
             this.companyNotHaveAccount.Controls.Add(this.pictureBox1);
@@ -631,6 +677,7 @@
             this.companyNotHaveAccount.Controls.Add(this.tradeReportPath);
             this.companyNotHaveAccount.Controls.Add(this.label22);
             this.companyNotHaveAccount.Controls.Add(this.companyName2);
+            this.companyNotHaveAccount.Controls.Add(this.pictureBox11);
             this.companyNotHaveAccount.Location = new System.Drawing.Point(4, 4);
             this.companyNotHaveAccount.Margin = new System.Windows.Forms.Padding(3, 3, 3, 20);
             this.companyNotHaveAccount.Name = "companyNotHaveAccount";
@@ -638,6 +685,18 @@
             this.companyNotHaveAccount.Size = new System.Drawing.Size(432, 624);
             this.companyNotHaveAccount.TabIndex = 1;
             this.companyNotHaveAccount.Text = "قرض بدون حساب مسبق";
+            // 
+            // checkBox1
+            // 
+            this.checkBox1.AutoSize = true;
+            this.checkBox1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.checkBox1.Location = new System.Drawing.Point(125, 417);
+            this.checkBox1.Name = "checkBox1";
+            this.checkBox1.Size = new System.Drawing.Size(281, 28);
+            this.checkBox1.TabIndex = 53;
+            this.checkBox1.Text = "هل تملك المؤسسة حساب في بنك اخر";
+            this.checkBox1.UseVisualStyleBackColor = true;
+            this.checkBox1.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged_1);
             // 
             // groupBox3
             // 
@@ -649,7 +708,7 @@
             this.groupBox3.Controls.Add(this.label28);
             this.groupBox3.Controls.Add(this.binfetPrecentage2);
             this.groupBox3.Controls.Add(this.button4);
-            this.groupBox3.Controls.Add(this.label29);
+            this.groupBox3.Controls.Add(this.lbl);
             this.groupBox3.Controls.Add(this.installmentValue2);
             this.groupBox3.Controls.Add(this.label30);
             this.groupBox3.Controls.Add(this.installmentsSystem2);
@@ -665,7 +724,7 @@
             this.groupBox3.Controls.Add(this.label35);
             this.groupBox3.Controls.Add(this.fieldPreviewPath2);
             this.groupBox3.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.groupBox3.Location = new System.Drawing.Point(13, 453);
+            this.groupBox3.Location = new System.Drawing.Point(13, 447);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Size = new System.Drawing.Size(398, 667);
             this.groupBox3.TabIndex = 52;
@@ -757,15 +816,15 @@
             this.button4.UseVisualStyleBackColor = true;
             this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
-            // label29
+            // lbl
             // 
-            this.label29.AutoSize = true;
-            this.label29.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label29.Location = new System.Drawing.Point(3, 302);
-            this.label29.Name = "label29";
-            this.label29.Size = new System.Drawing.Size(118, 19);
-            this.label29.TabIndex = 67;
-            this.label29.Text = "الجنية المصري";
+            this.lbl.AutoSize = true;
+            this.lbl.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl.Location = new System.Drawing.Point(3, 302);
+            this.lbl.Name = "lbl";
+            this.lbl.Size = new System.Drawing.Size(118, 19);
+            this.lbl.TabIndex = 67;
+            this.lbl.Text = "الجنية المصري";
             // 
             // installmentValue2
             // 
@@ -938,7 +997,7 @@
             this.panel1.Controls.Add(this.pictureBox8);
             this.panel1.Controls.Add(this.label9);
             this.panel1.Controls.Add(this.bankAccountReportPath);
-            this.panel1.Location = new System.Drawing.Point(101, 289);
+            this.panel1.Location = new System.Drawing.Point(97, 243);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(309, 161);
             this.panel1.TabIndex = 51;
@@ -962,7 +1021,6 @@
             this.accountNumberINbank.Name = "accountNumberINbank";
             this.accountNumberINbank.Size = new System.Drawing.Size(301, 26);
             this.accountNumberINbank.TabIndex = 54;
-            this.accountNumberINbank.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // label23
             // 
@@ -982,7 +1040,6 @@
             this.bankName.Name = "bankName";
             this.bankName.Size = new System.Drawing.Size(301, 26);
             this.bankName.TabIndex = 52;
-            this.bankName.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // pictureBox7
             // 
@@ -1031,19 +1088,6 @@
             this.bankAccountReportPath.Size = new System.Drawing.Size(232, 26);
             this.bankAccountReportPath.TabIndex = 48;
             this.bankAccountReportPath.Text = "اختار صورة";
-            this.bankAccountReportPath.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            // 
-            // checkBox1
-            // 
-            this.checkBox1.AutoSize = true;
-            this.checkBox1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.checkBox1.Location = new System.Drawing.Point(118, 258);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(281, 28);
-            this.checkBox1.TabIndex = 50;
-            this.checkBox1.Text = "هل تملك المؤسسة حساب في بنك اخر";
-            this.checkBox1.UseVisualStyleBackColor = true;
-            this.checkBox1.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
             // 
             // crruncy2
             // 
@@ -1057,10 +1101,10 @@
             "اليورو"});
             this.crruncy2.Location = new System.Drawing.Point(105, 210);
             this.crruncy2.Name = "crruncy2";
-            this.crruncy2.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.crruncy2.Size = new System.Drawing.Size(301, 27);
             this.crruncy2.Sorted = true;
             this.crruncy2.TabIndex = 49;
+            this.crruncy2.SelectedIndexChanged += new System.EventHandler(this.crruncy2_SelectedIndexChanged);
             // 
             // label19
             // 
@@ -1155,7 +1199,6 @@
             this.taxsIdPath.Size = new System.Drawing.Size(236, 26);
             this.taxsIdPath.TabIndex = 41;
             this.taxsIdPath.Text = "اختار صورة";
-            this.taxsIdPath.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // tradeReportPath
             // 
@@ -1168,7 +1211,6 @@
             this.tradeReportPath.Size = new System.Drawing.Size(236, 26);
             this.tradeReportPath.TabIndex = 40;
             this.tradeReportPath.Text = "اختار صورة";
-            this.tradeReportPath.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // label22
             // 
@@ -1188,7 +1230,16 @@
             this.companyName2.Name = "companyName2";
             this.companyName2.Size = new System.Drawing.Size(301, 26);
             this.companyName2.TabIndex = 38;
-            this.companyName2.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // pictureBox11
+            // 
+            this.pictureBox11.Image = global::Bank_System.Properties.Resources.logo2;
+            this.pictureBox11.Location = new System.Drawing.Point(5, 240);
+            this.pictureBox11.Name = "pictureBox11";
+            this.pictureBox11.Size = new System.Drawing.Size(405, 170);
+            this.pictureBox11.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox11.TabIndex = 57;
+            this.pictureBox11.TabStop = false;
             // 
             // fieldPreview_FileDialog
             // 
@@ -1222,12 +1273,12 @@
             this.tabControl1.ResumeLayout(false);
             this.companyHasAccount.ResumeLayout(false);
             this.companyHasAccount.PerformLayout();
-            this.groupBox2.ResumeLayout(false);
-            this.groupBox2.PerformLayout();
+            this.p2.ResumeLayout(false);
+            this.p2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
+            this.p1.ResumeLayout(false);
+            this.p1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.taxIDImag)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tradeReportImge)).EndInit();
             this.companyNotHaveAccount.ResumeLayout(false);
@@ -1244,6 +1295,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -1258,7 +1310,7 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox accountNumber;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.GroupBox p1;
         private System.Windows.Forms.PictureBox tradeReportImge;
         private System.Windows.Forms.PictureBox taxIDImag;
         private System.Windows.Forms.Label label4;
@@ -1283,7 +1335,6 @@
         private System.Windows.Forms.Label label22;
         private System.Windows.Forms.TextBox companyName2;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.CheckBox checkBox1;
         private System.Windows.Forms.Label label24;
         private System.Windows.Forms.TextBox accountNumberINbank;
         private System.Windows.Forms.Label label23;
@@ -1292,7 +1343,7 @@
         private System.Windows.Forms.PictureBox pictureBox8;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.TextBox bankAccountReportPath;
-        private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.GroupBox p2;
         private System.Windows.Forms.Label label18;
         private System.Windows.Forms.TextBox installmentWithBinfet;
         private System.Windows.Forms.Label label11;
@@ -1300,7 +1351,7 @@
         private System.Windows.Forms.Label label16;
         private System.Windows.Forms.TextBox binfetPrecentage;
         private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.Label crlbl;
         private System.Windows.Forms.TextBox installmentValue;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.ComboBox installmentsPaymentsSys;
@@ -1325,7 +1376,7 @@
         private System.Windows.Forms.Label label28;
         private System.Windows.Forms.TextBox binfetPrecentage2;
         private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Label label29;
+        private System.Windows.Forms.Label lbl;
         private System.Windows.Forms.TextBox installmentValue2;
         private System.Windows.Forms.Label label30;
         private System.Windows.Forms.ComboBox installmentsSystem2;
@@ -1343,5 +1394,10 @@
         private System.Windows.Forms.OpenFileDialog tradeReport_FileDialog;
         private System.Windows.Forms.OpenFileDialog financialID_FileDialog;
         private System.Windows.Forms.OpenFileDialog bankAccountReport;
+        private System.Windows.Forms.TextBox cash_in_arabic;
+        private System.Windows.Forms.TextBox cash;
+        private System.Windows.Forms.Label label36;
+        private System.Windows.Forms.CheckBox checkBox1;
+        private System.Windows.Forms.PictureBox pictureBox11;
     }
 }

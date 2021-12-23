@@ -57,6 +57,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="db\companyAccountDB.cs" />
+    <Compile Include="db\companyLoanDB.cs" />
     <Compile Include="db\createConnection.cs" />
     <Compile Include="db\personalAccountDB.cs" />
     <Compile Include="db\systemLogin.cs" />
@@ -93,11 +94,11 @@
     <Compile Include="viewmodel\customUserAccountPreview.Designer.cs">
       <DependentUpon>customUserAccountPreview.cs</DependentUpon>
     </Compile>
-    <Compile Include="viewmodel\loanCompanyReportPreview.cs">
+    <Compile Include="viewmodel\loanNormalCaseCompanyRPreview.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="viewmodel\loanCompanyReportPreview.Designer.cs">
-      <DependentUpon>loanCompanyReportPreview.cs</DependentUpon>
+    <Compile Include="viewmodel\loanNormalCaseCompanyRPreview.Designer.cs">
+      <DependentUpon>loanNormalCaseCompanyRPreview.cs</DependentUpon>
     </Compile>
     <Compile Include="view\newCompanyLoan.cs">
       <SubType>Form</SubType>
@@ -167,8 +168,8 @@
     <EmbeddedResource Include="viewmodel\customUserAccountPreview.resx">
       <DependentUpon>customUserAccountPreview.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="viewmodel\loanCompanyReportPreview.resx">
-      <DependentUpon>loanCompanyReportPreview.cs</DependentUpon>
+    <EmbeddedResource Include="viewmodel\loanNormalCaseCompanyRPreview.resx">
+      <DependentUpon>loanNormalCaseCompanyRPreview.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="view\newCompanyLoan.resx">
       <DependentUpon>newCompanyLoan.cs</DependentUpon>

@@ -1,6 +1,6 @@
 ﻿namespace Bank_System.viewmodel
 {
-    partial class loanCompanyReportPreview
+    partial class loanNormalCaseCompanyRPreview
     {
         /// <summary>
         /// Required designer variable.
@@ -58,7 +58,6 @@
             this.installmentSystem = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
             this.installmentsNumber = new System.Windows.Forms.TextBox();
-            this.label7 = new System.Windows.Forms.Label();
             this.arabicLoanValue = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.loanValue = new System.Windows.Forms.TextBox();
@@ -67,6 +66,9 @@
             this.button2 = new System.Windows.Forms.Button();
             this.label18 = new System.Windows.Forms.Label();
             this.dayDate = new System.Windows.Forms.TextBox();
+            this.installmentValue_in_arabic = new System.Windows.Forms.TextBox();
+            this.loanValue_in_arabic = new System.Windows.Forms.TextBox();
+            this.inValue_with_in_arabic = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -220,6 +222,9 @@
             // 
             this.panel2.BackColor = System.Drawing.Color.LightGray;
             this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel2.Controls.Add(this.inValue_with_in_arabic);
+            this.panel2.Controls.Add(this.loanValue_in_arabic);
+            this.panel2.Controls.Add(this.installmentValue_in_arabic);
             this.panel2.Controls.Add(this.label16);
             this.panel2.Controls.Add(this.installmentValue);
             this.panel2.Controls.Add(this.label15);
@@ -236,7 +241,6 @@
             this.panel2.Controls.Add(this.installmentSystem);
             this.panel2.Controls.Add(this.label9);
             this.panel2.Controls.Add(this.installmentsNumber);
-            this.panel2.Controls.Add(this.label7);
             this.panel2.Controls.Add(this.arabicLoanValue);
             this.panel2.Controls.Add(this.label6);
             this.panel2.Controls.Add(this.loanValue);
@@ -251,7 +255,7 @@
             // 
             this.label16.AutoSize = true;
             this.label16.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label16.Location = new System.Drawing.Point(245, 344);
+            this.label16.Location = new System.Drawing.Point(245, 275);
             this.label16.Name = "label16";
             this.label16.Size = new System.Drawing.Size(101, 19);
             this.label16.TabIndex = 65;
@@ -261,7 +265,7 @@
             // 
             this.installmentValue.BackColor = System.Drawing.SystemColors.WindowFrame;
             this.installmentValue.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.installmentValue.Location = new System.Drawing.Point(9, 366);
+            this.installmentValue.Location = new System.Drawing.Point(9, 297);
             this.installmentValue.Name = "installmentValue";
             this.installmentValue.ReadOnly = true;
             this.installmentValue.Size = new System.Drawing.Size(301, 26);
@@ -272,7 +276,7 @@
             // 
             this.label15.AutoSize = true;
             this.label15.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label15.Location = new System.Drawing.Point(134, 495);
+            this.label15.Location = new System.Drawing.Point(136, 493);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(212, 19);
             this.label15.TabIndex = 63;
@@ -282,7 +286,7 @@
             // 
             this.installmentWithBinfet.BackColor = System.Drawing.SystemColors.WindowFrame;
             this.installmentWithBinfet.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.installmentWithBinfet.Location = new System.Drawing.Point(9, 516);
+            this.installmentWithBinfet.Location = new System.Drawing.Point(11, 514);
             this.installmentWithBinfet.Name = "installmentWithBinfet";
             this.installmentWithBinfet.ReadOnly = true;
             this.installmentWithBinfet.Size = new System.Drawing.Size(301, 26);
@@ -293,7 +297,7 @@
             // 
             this.label14.AutoSize = true;
             this.label14.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.Location = new System.Drawing.Point(135, 447);
+            this.label14.Location = new System.Drawing.Point(137, 413);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(211, 19);
             this.label14.TabIndex = 61;
@@ -303,7 +307,7 @@
             // 
             this.loanValueWithBinfets.BackColor = System.Drawing.SystemColors.WindowFrame;
             this.loanValueWithBinfets.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.loanValueWithBinfets.Location = new System.Drawing.Point(7, 466);
+            this.loanValueWithBinfets.Location = new System.Drawing.Point(9, 432);
             this.loanValueWithBinfets.Name = "loanValueWithBinfets";
             this.loanValueWithBinfets.ReadOnly = true;
             this.loanValueWithBinfets.Size = new System.Drawing.Size(301, 26);
@@ -336,7 +340,7 @@
             // 
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.Location = new System.Drawing.Point(255, 547);
+            this.label12.Location = new System.Drawing.Point(257, 576);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(91, 19);
             this.label12.TabIndex = 57;
@@ -346,7 +350,7 @@
             // 
             this.loanEndDate.BackColor = System.Drawing.SystemColors.WindowFrame;
             this.loanEndDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.loanEndDate.Location = new System.Drawing.Point(7, 566);
+            this.loanEndDate.Location = new System.Drawing.Point(9, 596);
             this.loanEndDate.Name = "loanEndDate";
             this.loanEndDate.ReadOnly = true;
             this.loanEndDate.Size = new System.Drawing.Size(301, 26);
@@ -357,7 +361,7 @@
             // 
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(174, 394);
+            this.label11.Location = new System.Drawing.Point(176, 360);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(172, 19);
             this.label11.TabIndex = 55;
@@ -367,7 +371,7 @@
             // 
             this.binfetPrecentage.BackColor = System.Drawing.SystemColors.WindowFrame;
             this.binfetPrecentage.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.binfetPrecentage.Location = new System.Drawing.Point(7, 413);
+            this.binfetPrecentage.Location = new System.Drawing.Point(9, 379);
             this.binfetPrecentage.Name = "binfetPrecentage";
             this.binfetPrecentage.ReadOnly = true;
             this.binfetPrecentage.Size = new System.Drawing.Size(301, 26);
@@ -378,7 +382,7 @@
             // 
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(235, 293);
+            this.label10.Location = new System.Drawing.Point(235, 224);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(111, 19);
             this.label10.TabIndex = 53;
@@ -388,7 +392,7 @@
             // 
             this.installmentSystem.BackColor = System.Drawing.SystemColors.WindowFrame;
             this.installmentSystem.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.installmentSystem.Location = new System.Drawing.Point(7, 315);
+            this.installmentSystem.Location = new System.Drawing.Point(7, 246);
             this.installmentSystem.Name = "installmentSystem";
             this.installmentSystem.ReadOnly = true;
             this.installmentSystem.Size = new System.Drawing.Size(301, 26);
@@ -399,7 +403,7 @@
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(243, 242);
+            this.label9.Location = new System.Drawing.Point(243, 173);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(103, 19);
             this.label9.TabIndex = 51;
@@ -409,32 +413,22 @@
             // 
             this.installmentsNumber.BackColor = System.Drawing.SystemColors.WindowFrame;
             this.installmentsNumber.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.installmentsNumber.Location = new System.Drawing.Point(7, 264);
+            this.installmentsNumber.Location = new System.Drawing.Point(7, 195);
             this.installmentsNumber.Name = "installmentsNumber";
             this.installmentsNumber.ReadOnly = true;
             this.installmentsNumber.Size = new System.Drawing.Size(301, 26);
             this.installmentsNumber.TabIndex = 50;
             this.installmentsNumber.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(149, 149);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(199, 19);
-            this.label7.TabIndex = 49;
-            this.label7.Text = "قيمة القرض باللغة العربية";
-            // 
             // arabicLoanValue
             // 
             this.arabicLoanValue.BackColor = System.Drawing.SystemColors.WindowFrame;
-            this.arabicLoanValue.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.arabicLoanValue.Location = new System.Drawing.Point(7, 171);
+            this.arabicLoanValue.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.arabicLoanValue.Location = new System.Drawing.Point(7, 144);
             this.arabicLoanValue.Multiline = true;
             this.arabicLoanValue.Name = "arabicLoanValue";
             this.arabicLoanValue.ReadOnly = true;
-            this.arabicLoanValue.Size = new System.Drawing.Size(301, 68);
+            this.arabicLoanValue.Size = new System.Drawing.Size(339, 26);
             this.arabicLoanValue.TabIndex = 48;
             this.arabicLoanValue.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
@@ -513,7 +507,40 @@
             this.dayDate.TabIndex = 65;
             this.dayDate.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
-            // loanReportPreview
+            // installmentValue_in_arabic
+            // 
+            this.installmentValue_in_arabic.BackColor = System.Drawing.SystemColors.WindowFrame;
+            this.installmentValue_in_arabic.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.installmentValue_in_arabic.Location = new System.Drawing.Point(9, 329);
+            this.installmentValue_in_arabic.Name = "installmentValue_in_arabic";
+            this.installmentValue_in_arabic.ReadOnly = true;
+            this.installmentValue_in_arabic.Size = new System.Drawing.Size(337, 26);
+            this.installmentValue_in_arabic.TabIndex = 66;
+            this.installmentValue_in_arabic.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // loanValue_in_arabic
+            // 
+            this.loanValue_in_arabic.BackColor = System.Drawing.SystemColors.WindowFrame;
+            this.loanValue_in_arabic.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.loanValue_in_arabic.Location = new System.Drawing.Point(9, 463);
+            this.loanValue_in_arabic.Name = "loanValue_in_arabic";
+            this.loanValue_in_arabic.ReadOnly = true;
+            this.loanValue_in_arabic.Size = new System.Drawing.Size(337, 26);
+            this.loanValue_in_arabic.TabIndex = 67;
+            this.loanValue_in_arabic.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // inValue_with_in_arabic
+            // 
+            this.inValue_with_in_arabic.BackColor = System.Drawing.SystemColors.WindowFrame;
+            this.inValue_with_in_arabic.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.inValue_with_in_arabic.Location = new System.Drawing.Point(9, 545);
+            this.inValue_with_in_arabic.Name = "inValue_with_in_arabic";
+            this.inValue_with_in_arabic.ReadOnly = true;
+            this.inValue_with_in_arabic.Size = new System.Drawing.Size(337, 26);
+            this.inValue_with_in_arabic.TabIndex = 68;
+            this.inValue_with_in_arabic.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // loanCompanyReportPreview
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 24F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -532,7 +559,7 @@
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Margin = new System.Windows.Forms.Padding(6);
-            this.Name = "loanReportPreview";
+            this.Name = "loanCompanyReportPreview";
             this.Padding = new System.Windows.Forms.Padding(0, 0, 0, 20);
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "loanReportPreview";
@@ -567,7 +594,6 @@
         private System.Windows.Forms.TextBox installmentSystem;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.TextBox installmentsNumber;
-        private System.Windows.Forms.Label label7;
         private System.Windows.Forms.TextBox arabicLoanValue;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.TextBox loanValue;
@@ -589,5 +615,8 @@
         private System.Windows.Forms.RichTextBox feildPreviewNotes;
         private System.Windows.Forms.Label label18;
         private System.Windows.Forms.TextBox dayDate;
+        private System.Windows.Forms.TextBox inValue_with_in_arabic;
+        private System.Windows.Forms.TextBox loanValue_in_arabic;
+        private System.Windows.Forms.TextBox installmentValue_in_arabic;
     }
 }

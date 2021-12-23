@@ -33,19 +33,24 @@
             this.label1 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.cash = new System.Windows.Forms.TextBox();
             this.button2 = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.button3 = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.name = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.crruncy = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.textBox5 = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.button4 = new System.Windows.Forms.Button();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.personalacc = new System.Windows.Forms.RadioButton();
+            this.companyacc = new System.Windows.Forms.RadioButton();
+            this.arabic_cash = new System.Windows.Forms.TextBox();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // accountNumber
@@ -85,17 +90,17 @@
             this.label2.TabIndex = 4;
             this.label2.Text = "الرصيد الحالي";
             // 
-            // textBox1
+            // cash
             // 
-            this.textBox1.BackColor = System.Drawing.SystemColors.ControlDark;
-            this.textBox1.Location = new System.Drawing.Point(148, 191);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(6);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.ReadOnly = true;
-            this.textBox1.Size = new System.Drawing.Size(229, 29);
-            this.textBox1.TabIndex = 3;
-            this.textBox1.Text = "50,000";
-            this.textBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.cash.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.cash.Location = new System.Drawing.Point(148, 191);
+            this.cash.Margin = new System.Windows.Forms.Padding(6);
+            this.cash.Name = "cash";
+            this.cash.ReadOnly = true;
+            this.cash.Size = new System.Drawing.Size(229, 29);
+            this.cash.TabIndex = 3;
+            this.cash.Text = "50,000";
+            this.cash.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // button2
             // 
@@ -125,11 +130,11 @@
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(17, 336);
+            this.button3.Location = new System.Drawing.Point(12, 336);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(113, 31);
+            this.button3.Size = new System.Drawing.Size(118, 31);
             this.button3.TabIndex = 8;
-            this.button3.Text = "ايداع";
+            this.button3.Text = "سحب";
             this.button3.UseVisualStyleBackColor = true;
             // 
             // label4
@@ -141,17 +146,17 @@
             this.label4.TabIndex = 10;
             this.label4.Text = "اسم صاحب الحساب";
             // 
-            // textBox3
+            // name
             // 
-            this.textBox3.BackColor = System.Drawing.SystemColors.ControlDark;
-            this.textBox3.Location = new System.Drawing.Point(148, 106);
-            this.textBox3.Margin = new System.Windows.Forms.Padding(6);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.ReadOnly = true;
-            this.textBox3.Size = new System.Drawing.Size(228, 29);
-            this.textBox3.TabIndex = 9;
-            this.textBox3.Text = "اسم تجريبي";
-            this.textBox3.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.name.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.name.Location = new System.Drawing.Point(148, 106);
+            this.name.Margin = new System.Windows.Forms.Padding(6);
+            this.name.Name = "name";
+            this.name.ReadOnly = true;
+            this.name.Size = new System.Drawing.Size(228, 29);
+            this.name.TabIndex = 9;
+            this.name.Text = "اسم تجريبي";
+            this.name.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // label5
             // 
@@ -162,22 +167,22 @@
             this.label5.TabIndex = 12;
             this.label5.Text = "العملة";
             // 
-            // textBox4
+            // crruncy
             // 
-            this.textBox4.BackColor = System.Drawing.SystemColors.ControlDark;
-            this.textBox4.Location = new System.Drawing.Point(148, 147);
-            this.textBox4.Margin = new System.Windows.Forms.Padding(6);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.ReadOnly = true;
-            this.textBox4.Size = new System.Drawing.Size(228, 29);
-            this.textBox4.TabIndex = 11;
-            this.textBox4.Text = "الجنية المصري";
-            this.textBox4.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.crruncy.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.crruncy.Location = new System.Drawing.Point(148, 147);
+            this.crruncy.Margin = new System.Windows.Forms.Padding(6);
+            this.crruncy.Name = "crruncy";
+            this.crruncy.ReadOnly = true;
+            this.crruncy.Size = new System.Drawing.Size(228, 29);
+            this.crruncy.TabIndex = 11;
+            this.crruncy.Text = "الجنية المصري";
+            this.crruncy.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(360, 242);
+            this.label6.Location = new System.Drawing.Point(360, 267);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(170, 24);
             this.label6.TabIndex = 14;
@@ -186,7 +191,7 @@
             // textBox5
             // 
             this.textBox5.BackColor = System.Drawing.SystemColors.ControlDark;
-            this.textBox5.Location = new System.Drawing.Point(148, 239);
+            this.textBox5.Location = new System.Drawing.Point(148, 264);
             this.textBox5.Margin = new System.Windows.Forms.Padding(6);
             this.textBox5.Name = "textBox5";
             this.textBox5.ReadOnly = true;
@@ -200,7 +205,7 @@
             this.label7.AutoSize = true;
             this.label7.BackColor = System.Drawing.SystemColors.GrayText;
             this.label7.ForeColor = System.Drawing.Color.Azure;
-            this.label7.Location = new System.Drawing.Point(114, 274);
+            this.label7.Location = new System.Drawing.Point(114, 299);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(290, 24);
             this.label7.TabIndex = 15;
@@ -208,33 +213,81 @@
             // 
             // button4
             // 
-            this.button4.Location = new System.Drawing.Point(12, 239);
+            this.button4.Location = new System.Drawing.Point(12, 264);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(127, 31);
             this.button4.TabIndex = 16;
             this.button4.Text = "سداد";
             this.button4.UseVisualStyleBackColor = true;
             // 
+            // panel1
+            // 
+            this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel1.Controls.Add(this.personalacc);
+            this.panel1.Controls.Add(this.companyacc);
+            this.panel1.Location = new System.Drawing.Point(105, 55);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(325, 34);
+            this.panel1.TabIndex = 19;
+            // 
+            // personalacc
+            // 
+            this.personalacc.AutoSize = true;
+            this.personalacc.Checked = true;
+            this.personalacc.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.personalacc.Location = new System.Drawing.Point(3, 6);
+            this.personalacc.Name = "personalacc";
+            this.personalacc.Size = new System.Drawing.Size(112, 24);
+            this.personalacc.TabIndex = 1;
+            this.personalacc.TabStop = true;
+            this.personalacc.Text = "حساب شخصي";
+            this.personalacc.UseVisualStyleBackColor = true;
+            // 
+            // companyacc
+            // 
+            this.companyacc.AutoSize = true;
+            this.companyacc.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.companyacc.Location = new System.Drawing.Point(212, 6);
+            this.companyacc.Name = "companyacc";
+            this.companyacc.Size = new System.Drawing.Size(110, 24);
+            this.companyacc.TabIndex = 0;
+            this.companyacc.Text = "حساب مؤسسة";
+            this.companyacc.UseVisualStyleBackColor = true;
+            // 
+            // arabic_cash
+            // 
+            this.arabic_cash.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.arabic_cash.Location = new System.Drawing.Point(12, 223);
+            this.arabic_cash.Margin = new System.Windows.Forms.Padding(6);
+            this.arabic_cash.Name = "arabic_cash";
+            this.arabic_cash.ReadOnly = true;
+            this.arabic_cash.Size = new System.Drawing.Size(518, 29);
+            this.arabic_cash.TabIndex = 20;
+            this.arabic_cash.Text = "50,000";
+            this.arabic_cash.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
             // cashWithdrawal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 24F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Gray;
-            this.ClientSize = new System.Drawing.Size(554, 63);
+            this.ClientSize = new System.Drawing.Size(554, 93);
+            this.Controls.Add(this.arabic_cash);
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.button4);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.textBox5);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.textBox4);
+            this.Controls.Add(this.crruncy);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.textBox3);
+            this.Controls.Add(this.name);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.textBox2);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.cash);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.accountNumber);
@@ -245,6 +298,8 @@
             this.RightToLeftLayout = true;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "سحب مالي";
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -256,18 +311,22 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox cash;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox name;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox crruncy;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.TextBox textBox5;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.RadioButton personalacc;
+        private System.Windows.Forms.RadioButton companyacc;
+        private System.Windows.Forms.TextBox arabic_cash;
     }
 }

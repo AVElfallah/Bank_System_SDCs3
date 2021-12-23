@@ -15,7 +15,7 @@ namespace Bank_System.view
         private void button1_Click_1(object sender, EventArgs e)
         {
             model.personalAccount account = new model.personalAccount();
-       
+
             account.name = fullName.Text;
             account.accountNumber = model.RandomNumbers.accountNumberGen();
             account.national = national.Text;
@@ -34,7 +34,7 @@ namespace Bank_System.view
             {
                 if (account.accountVisa == null)
                 {
-                    account.accountVisa=viewmodel.createCard.getNewVisa();
+                    account.accountVisa = viewmodel.createCard.getNewVisa();
                 }
 
 

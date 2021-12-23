@@ -7,8 +7,8 @@
         #region ifCompanyHaveAnotherBankAccount
         public byte[] bankAccountReportLast6Month
         {
-            get { return bankAccountReportLast6Month; }
-            set { bankAccountReportLast6Month = photo.encryption(value.ToString()); }
+            get;
+            set;
         }
         public string bankName { get; set; }
 
