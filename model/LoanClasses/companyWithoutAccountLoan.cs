@@ -2,7 +2,7 @@
 {
     public class companyWithoutAccountLoan : loanBase
     {
-        public companyAccount company { get; set; }
+        public companyAccount tempcompany { get; set; }
         public bool haveBankAccount { get; set; }
         #region ifCompanyHaveAnotherBankAccount
         public byte[] bankAccountReportLast6Month
@@ -12,7 +12,7 @@
         }
         public string bankName { get; set; }
 
-        public int bankNumber { get; set; }
+        public string bankNumber { get; set; }
         #endregion
 
 

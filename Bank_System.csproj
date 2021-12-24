@@ -60,6 +60,7 @@
     <Compile Include="db\companyLoanDB.cs" />
     <Compile Include="db\createConnection.cs" />
     <Compile Include="db\personalAccountDB.cs" />
+    <Compile Include="db\personalLoanDB.cs" />
     <Compile Include="db\systemLogin.cs" />
     <Compile Include="model\calcLoanEndDate.cs" />
     <Compile Include="model\companyAccount.cs" />
@@ -70,6 +71,7 @@
     <Compile Include="model\LoanClasses\companyWithAccountInOurBankLoan.cs" />
     <Compile Include="model\LoanClasses\companyWithoutAccountLoan.cs" />
     <Compile Include="model\LoanClasses\loanBase.cs" />
+    <Compile Include="model\LoanClasses\personalLoan.cs" />
     <Compile Include="model\personalAccount.cs" />
     <Compile Include="model\photo.cs" />
     <Compile Include="model\RandomNumbers.cs" />
@@ -94,6 +96,18 @@
     <Compile Include="viewmodel\customUserAccountPreview.Designer.cs">
       <DependentUpon>customUserAccountPreview.cs</DependentUpon>
     </Compile>
+    <Compile Include="viewmodel\loan2ndCaseCompanyRPreview.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="viewmodel\loan2ndCaseCompanyRPreview.Designer.cs">
+      <DependentUpon>loan2ndCaseCompanyRPreview.cs</DependentUpon>
+    </Compile>
+    <Compile Include="viewmodel\loanPersonalRPrieview.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="viewmodel\loanPersonalRPrieview.Designer.cs">
+      <DependentUpon>loanPersonalRPrieview.cs</DependentUpon>
+    </Compile>
     <Compile Include="viewmodel\loanNormalCaseCompanyRPreview.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -111,6 +125,12 @@
     </Compile>
     <Compile Include="viewmodel\previewIMGDialog.Designer.cs">
       <DependentUpon>previewIMGDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="view\newPersonalLoan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="view\newPersonalLoan.Designer.cs">
+      <DependentUpon>newPersonalLoan.cs</DependentUpon>
     </Compile>
     <Compile Include="view\releaseCreditcard.cs">
       <SubType>Form</SubType>
@@ -168,6 +188,12 @@
     <EmbeddedResource Include="viewmodel\customUserAccountPreview.resx">
       <DependentUpon>customUserAccountPreview.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="viewmodel\loan2ndCaseCompanyRPreview.resx">
+      <DependentUpon>loan2ndCaseCompanyRPreview.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="viewmodel\loanPersonalRPrieview.resx">
+      <DependentUpon>loanPersonalRPrieview.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="viewmodel\loanNormalCaseCompanyRPreview.resx">
       <DependentUpon>loanNormalCaseCompanyRPreview.cs</DependentUpon>
     </EmbeddedResource>
@@ -176,6 +202,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="viewmodel\previewIMGDialog.resx">
       <DependentUpon>previewIMGDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="view\newPersonalLoan.resx">
+      <DependentUpon>newPersonalLoan.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="view\releaseCreditcard.resx">
       <DependentUpon>releaseCreditcard.cs</DependentUpon>
@@ -233,6 +262,7 @@
     <Content Include="assets\logo2.png" />
     <Content Include="assets\preview.png" />
     <Content Include="assets\user.png" />
+    <Content Include="assets\viasbackground.jpg" />
     <Content Include="logo2_gk1_icon.ico" />
     <None Include="assets\card.png" />
   </ItemGroup>

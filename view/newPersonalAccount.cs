@@ -36,16 +36,23 @@ namespace Bank_System.view
                 {
                     account.accountVisa = viewmodel.createCard.getNewVisa();
                 }
+                if (account.accountVisa != null)
+                {
+                    model.systemData.navigator.formStore.Push(this);
+                    viewmodel.customUserAccountPreview custom = new viewmodel.customUserAccountPreview(account);
+                    this.Visible = false;
+                    custom.ShowDialog();
+                }
 
 
             }
-            if (account.accountVisa != null)
-            {
+            else {
                 model.systemData.navigator.formStore.Push(this);
                 viewmodel.customUserAccountPreview custom = new viewmodel.customUserAccountPreview(account);
                 this.Visible = false;
                 custom.ShowDialog();
             }
+         
         }
 
         private void pictureBox1_Click_1(object sender, EventArgs e)

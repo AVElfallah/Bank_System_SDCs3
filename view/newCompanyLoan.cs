@@ -53,24 +53,30 @@ namespace Bank_System.view
 
         private void installmentsNumber_TextChanged(object sender, EventArgs e)
         {
-            checkAndChangeValues();
+            calcinstallmentWithBinfet();
             calcEndDate();
+            checkAndChangeValues();
         }
 
         private void installmentsPaymentsSys_SelectedIndexChanged(object sender, EventArgs e)
         {
-            checkAndChangeValues();
+            calcinstallmentWithBinfet();
             calcEndDate();
+            checkAndChangeValues();
         }
 
         private void binfetPrecentage_TextChanged(object sender, EventArgs e)
         {
             calcinstallmentWithBinfet();
+            calcEndDate();
+            checkAndChangeValues();
         }
 
         private void totalCostOfLoan_TextChanged_1(object sender, EventArgs e)
 
         {
+            calcinstallmentWithBinfet();
+            calcEndDate();
             checkAndChangeValues();
 
 
@@ -105,10 +111,10 @@ namespace Bank_System.view
 
         private void button2_Click(object sender, EventArgs e)
         {
-            newCompanyAccount account=new newCompanyAccount();
+            newCompanyAccount account = new newCompanyAccount();
             this.Hide();
             account.ShowDialog();
-            
+
         }
 
         private void pictureBox3_Click(object sender, EventArgs e)
@@ -224,6 +230,40 @@ namespace Bank_System.view
         {
             if (validationCaseHaveAnotherBankAccount())
             {
+                model.companyAccount account = new model.companyAccount();
+                model.LoanClasses.companyWithoutAccountLoan accountLoan = new model.LoanClasses.companyWithoutAccountLoan();
+                account.name = companyName2.Text;
+                account.crruncy = crruncy2.Text;
+                account.accountNumber = model.RandomNumbers.accountNumberGen();
+                account.tradeReportPhoto = model.photo.encryption(tradeReport_FileDialog.FileName);
+                account.financialIdPhoto = model.photo.encryption(financialID_FileDialog.FileName);
+                accountLoan.tempcompany = account;
+                accountLoan.haveBankAccount = checkBox1.Checked;
+
+                if (checkBox1.Checked)
+                {
+
+                    accountLoan.bankAccountReportLast6Month =
+                        model.photo.encryption(bankAccountReport.FileName);
+                    accountLoan.bankName = bankName.Text;
+                    accountLoan.bankNumber = accountNumberINbank.Text;
+
+                }
+                accountLoan.fieldPreviewImage =
+                    model.photo.encryption(fieldPreview_FileDialog.FileName);
+                accountLoan.fieldPreviewNote = fieldPreviewNotes2.Text;
+                accountLoan.loanValue = double.Parse(loanValue2.Text);
+                accountLoan.installmentsNumber = double.Parse(installmentsNumber2.Text);
+                accountLoan.benfitPrecent = double.Parse(binfetPrecentage2.Text);
+                accountLoan.installmentsSystem = installmentsSystem2.Text;
+                accountLoan.installmentValue = double.Parse(installmentValue2.Text);
+                accountLoan.installmentValueWithBinfets = double.Parse(installmentWithBinfets2.Text);
+                accountLoan.loanEndDate = endDATE;
+                viewmodel.loan2ndCaseCompanyRPreview loan2Nd = new viewmodel.loan2ndCaseCompanyRPreview(accountLoan);
+                accountLoan.loanID =
+                    model.RandomNumbers.accountNumberGen();
+                loan2Nd.ShowDialog();
+
 
 
             }
@@ -253,7 +293,7 @@ namespace Bank_System.view
             calcEndDate2();
         }
 
-     
+
 
         #region methods
         //validation
@@ -454,8 +494,7 @@ namespace Bank_System.view
 
         private void checkBox1_CheckedChanged_1(object sender, EventArgs e)
         {
-            panel1.Visible = checkBox1.Checked;
-            pictureBox11.Visible = !checkBox1.Checked;
+            panel1.Enabled = checkBox1.Checked;
         }
 
         private void crruncy2_SelectedIndexChanged(object sender, EventArgs e)
