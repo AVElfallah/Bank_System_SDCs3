@@ -28,6 +28,7 @@ namespace Bank_System.view
             company.tradeReportPhoto = model.photo.encryption(tradeReport_FileDialog.FileName);
             model.systemData.navigator.formStore.Push(this);
             viewmodel.customCompanyAccountPreview customCompany = new viewmodel.customCompanyAccountPreview(company);
+            model.systemData.navigator.formStore.Push(this);
             this.Visible = false;
             customCompany.ShowDialog();
 

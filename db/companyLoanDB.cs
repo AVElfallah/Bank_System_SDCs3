@@ -5,7 +5,24 @@ namespace Bank_System.db
 {
     public static class companyLoanDB
     {
+      
+        public static bool addInstallment(model.installment installment)
+        {
 
+            var con = createConnection.openConnection();
+            var qu = $"insert into installments values('{installment.loan_id}'" +
+                $",'{installment.installment_id_this_period}','{installment.installment_id_next_period}',{installment.installment_value_with_benfit})";
+            var cmd = new SqlCommand(qu, con);
+            if (cmd.ExecuteNonQuery() != 0)
+            {
+
+                cmd.Cancel();
+                con.Close();
+                return true;
+            }
+
+            return false;
+        }
         public static bool addLoanWithoutAccount(model.LoanClasses.companyWithoutAccountLoan company)
         {
             var con = createConnection.openConnection();
@@ -26,6 +43,17 @@ namespace Bank_System.db
             {
                 con.Close();
                 cmd.Dispose();
+
+                #region installmentSet
+                var _1st_installment =DateTime.Now.AddMonths(company.getINTInsSystem);
+                model.installment installment =new model.installment();
+                installment.loan_id= company.loanID;    
+                installment.installment_value_with_benfit= company.installmentValueWithBinfets;
+                installment.installment_id_this_period = _1st_installment;
+                installment.installment_id_next_period = _1st_installment.AddMonths(company.getINTInsSystem);
+                addInstallment(installment);
+                #endregion
+                
                 addtempCompanyAccount(company);
                 return true;
             }
@@ -52,6 +80,7 @@ namespace Bank_System.db
             {
                 con.Close();
                 cmd.Dispose();
+
                 return true;
             }
             con.Close();
@@ -76,6 +105,15 @@ namespace Bank_System.db
             {
                 con.Close();
                 cmd.Dispose();
+                #region installmentSet
+                var _1st_installment = DateTime.Now.AddMonths(company.getINTInsSystem);
+                model.installment installment = new model.installment();
+                installment.loan_id = company.loanID;
+                installment.installment_value_with_benfit = company.installmentValueWithBinfets;
+                installment.installment_id_this_period = _1st_installment;
+                installment.installment_id_next_period = _1st_installment.AddMonths(company.getINTInsSystem);
+                addInstallment(installment);
+                #endregion
                 return true;
             }
             con.Close();

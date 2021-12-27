@@ -614,6 +614,7 @@
             this.button2.TabIndex = 4;
             this.button2.Text = "الرجوع الي التعديل";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // label18
             // 
@@ -647,7 +648,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.BackColor = System.Drawing.Color.Gray;
-            this.ClientSize = new System.Drawing.Size(824, 449);
+            this.ClientSize = new System.Drawing.Size(841, 449);
             this.Controls.Add(this.dayDate);
             this.Controls.Add(this.label18);
             this.Controls.Add(this.button2);

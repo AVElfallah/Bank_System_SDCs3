@@ -53,6 +53,8 @@ namespace Bank_System.viewmodel
             MessageBox.Show(" تمت طباعة التقارير جري الحفظ");
             if (db.companyLoanDB.addNormalLoan(loan))
             {
+                this.Close();
+                model.systemData.navigator.formStore.Pop().Close();
                 MessageBox.Show("تم الحفظ");
             }
             else
@@ -64,6 +66,12 @@ namespace Bank_System.viewmodel
         private void loanID_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            model.systemData.navigator.formStore.Pop().Visible = true;
         }
     }
 }

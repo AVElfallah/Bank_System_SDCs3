@@ -5,6 +5,7 @@ namespace Bank_System.db
 {
     public static class personalAccountDB
     {
+  
         public static bool createNewVisaByID(string accountNumber, model.Visa visa)
         {
             bool back = false;
@@ -94,41 +95,8 @@ namespace Bank_System.db
             }
 
         }
-        public static bool addAccountWithVisa(model.personalAccount account)
-        {
-            var conn = createConnection.openConnection();
-            var now = DateTime.Now.ToString();
-            bool back = false;
-            var sqlQu =
-         $"insert into personal_account values(N'{account.accountNumber}'" +
-         $",N'{account.name}',N'{account.national}',N'{account.nationalId}'" +
-         $",N'{account.job}',N'{account.crruncy}',N'{account.accountReport}'" +
-         $",N'{account.notes}',{account.cash},@isHaveVisa" +
-         $",@isHaveCheque,@visa_number" +
-         $",@trade_report,@national_id_photo,'{now}')";
-            SqlCommand cmd = new SqlCommand(sqlQu, conn);
-            cmd.Parameters.AddWithValue("visa_number", $"{account.accountVisa.visaNumber}");
-            cmd.Parameters.AddWithValue("isHaveVisa", account.isHaveVisa ? 1 : 0);
-            cmd.Parameters.AddWithValue("isHaveCheque", account.isHaveCheque ? 1 : 0);
-            cmd.Parameters.AddWithValue("trade_report", account.tradeReportPhoto);
-            cmd.Parameters.AddWithValue("national_id_photo", account.nationalIdPhoto);
-            if (cmd.ExecuteNonQuery() != 0)
-            {
 
-                cmd.Dispose();
-                back = true;
-            }
-            var qu2 = $"insert into visa values('{account.accountVisa.visaNumber}','{account.accountVisa.expDate}','{account.accountVisa.nameInVisa}')";
-            SqlCommand cmd2 = new SqlCommand(qu2, conn);
-            if (cmd2.ExecuteNonQuery() != 0)
-            {
-                cmd2.Dispose();
-                conn.Dispose();
-                back = true;
-            }
-            return back;
-        }
-        public static bool addAccountWithoutVisa(model.personalAccount account)
+        public static bool addAccount(model.personalAccount account)
         {
             var conn = createConnection.openConnection();
             var now = DateTime.Now.ToString();
@@ -140,16 +108,30 @@ namespace Bank_System.db
          $",@isHaveCheque,@visa_number" +
          $",@trade_report,@national_id_photo,'{now}')";
             SqlCommand cmd = new SqlCommand(sqlQu, conn);
-            cmd.Parameters.AddWithValue("visa_number", "");
+            cmd.Parameters.AddWithValue("visa_number", account.isHaveVisa?account.accountVisa.visaNumber:(object)DBNull.Value);
             cmd.Parameters.AddWithValue("isHaveVisa", account.isHaveVisa ? 1 : 0);
             cmd.Parameters.AddWithValue("isHaveCheque", account.isHaveCheque ? 1 : 0);
             cmd.Parameters.AddWithValue("trade_report", account.tradeReportPhoto);
             cmd.Parameters.AddWithValue("national_id_photo", account.nationalIdPhoto);
             if (cmd.ExecuteNonQuery() != 0)
             {
-                conn.Close();
+               
                 cmd.Dispose();
-                return true;
+                if (account.isHaveVisa)
+                {
+                    var q2  = $"insert into visa values('{account.accountVisa.visaNumber}','{account.accountVisa.expDate}','{account.accountVisa.nameInVisa}')";
+                    using (SqlCommand command = new SqlCommand(q2, conn))
+                    {
+                        if (command.ExecuteNonQuery() != 0)
+                        {
+                            command.Dispose();
+                            conn.Close();
+                            return true;
+                        }  
+                    }
+                }
+                conn.Close();
+                    return true;
             }
             return false;
         }

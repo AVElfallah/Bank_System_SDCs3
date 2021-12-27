@@ -31,8 +31,6 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
             this.textBox3 = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
@@ -40,7 +38,13 @@
             this.cardNumber = new System.Windows.Forms.Label();
             this.cardOwnerName = new System.Windows.Forms.Label();
             this.cardExpDate = new System.Windows.Forms.Label();
+            this.month = new System.Windows.Forms.ComboBox();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.year = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // pictureBox1
@@ -72,26 +76,6 @@
             this.textBox1.TabIndex = 18;
             this.textBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(708, 138);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(104, 24);
-            this.label2.TabIndex = 17;
-            this.label2.Text = "تاريخ الانتهاء";
-            // 
-            // textBox2
-            // 
-            this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.Location = new System.Drawing.Point(695, 165);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(117, 29);
-            this.textBox2.TabIndex = 18;
-            this.textBox2.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.textBox2.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
             // 
             // textBox3
             // 
@@ -167,12 +151,70 @@
             this.cardExpDate.TabIndex = 25;
             this.cardExpDate.Text = "Exp: ";
             // 
+            // month
+            // 
+            this.month.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.month.FormattingEnabled = true;
+            this.month.Location = new System.Drawing.Point(190, 57);
+            this.month.Name = "month";
+            this.month.Size = new System.Drawing.Size(100, 28);
+            this.month.TabIndex = 26;
+            this.month.SelectedIndexChanged += new System.EventHandler(this.month_SelectedIndexChanged);
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.year);
+            this.groupBox1.Controls.Add(this.month);
+            this.groupBox1.Controls.Add(this.label4);
+            this.groupBox1.Controls.Add(this.label2);
+            this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox1.Location = new System.Drawing.Point(505, 145);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.groupBox1.Size = new System.Drawing.Size(307, 100);
+            this.groupBox1.TabIndex = 27;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "تاريخ الانتهاء";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(216, 29);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(49, 24);
+            this.label2.TabIndex = 19;
+            this.label2.Text = "الشهر";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(58, 30);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(45, 24);
+            this.label4.TabIndex = 19;
+            this.label4.Text = "السنه";
+            // 
+            // year
+            // 
+            this.year.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.year.FormattingEnabled = true;
+            this.year.ImeMode = System.Windows.Forms.ImeMode.Off;
+            this.year.Location = new System.Drawing.Point(29, 57);
+            this.year.MaxLength = 10;
+            this.year.Name = "year";
+            this.year.Size = new System.Drawing.Size(100, 28);
+            this.year.TabIndex = 26;
+            this.year.SelectedIndexChanged += new System.EventHandler(this.year_SelectedIndexChanged);
+            // 
             // createCard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Gray;
             this.ClientSize = new System.Drawing.Size(824, 314);
+            this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.cardExpDate);
             this.Controls.Add(this.cardOwnerName);
             this.Controls.Add(this.cardNumber);
@@ -180,9 +222,7 @@
             this.Controls.Add(this.button1);
             this.Controls.Add(this.textBox3);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.textBox2);
             this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.pictureBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
@@ -191,6 +231,8 @@
             this.Text = "انشاء بطاقة دفع وإتمان";
             this.Load += new System.EventHandler(this.createCard_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -201,8 +243,6 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.TextBox textBox3;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button button1;
@@ -210,5 +250,10 @@
         private System.Windows.Forms.Label cardNumber;
         private System.Windows.Forms.Label cardOwnerName;
         private System.Windows.Forms.Label cardExpDate;
+        private System.Windows.Forms.ComboBox month;
+        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.ComboBox year;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label2;
     }
 }

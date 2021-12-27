@@ -20,7 +20,7 @@ namespace Bank_System.viewmodel
             feildPreviewNotes.Text = loan.fieldPreviewNote;
             crruncy.Text = loan.personal.crruncy;
             bankAccountiD.Text = loan.personal.accountNumber;
-            pictureBox3.Image = model.photo.decryption(loan.personal.nationalIdPhoto) ;
+            pictureBox3.Image = model.photo.decryption(loan.personal.nationalIdPhoto);
             loanID.Text = loan.loanID;
             loanValue.Text = loan.loanValue.ToString();
 
@@ -55,6 +55,8 @@ namespace Bank_System.viewmodel
             MessageBox.Show(" تمت طباعة التقارير جري الحفظ");
             if (db.personalLoanDB.addLoan(loan))
             {
+                this.Close();
+                model.systemData.navigator.formStore.Pop().Close();
                 MessageBox.Show("تم الحفظ");
             }
             else
@@ -71,6 +73,8 @@ namespace Bank_System.viewmodel
         private void button2_Click(object sender, EventArgs e)
         {
 
+            this.Close();
+            model.systemData.navigator.formStore.Pop().Visible = true;
         }
     }
 }

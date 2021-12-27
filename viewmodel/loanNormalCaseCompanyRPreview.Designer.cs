@@ -42,6 +42,9 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.inValue_with_in_arabic = new System.Windows.Forms.TextBox();
+            this.loanValue_in_arabic = new System.Windows.Forms.TextBox();
+            this.installmentValue_in_arabic = new System.Windows.Forms.TextBox();
             this.label16 = new System.Windows.Forms.Label();
             this.installmentValue = new System.Windows.Forms.TextBox();
             this.label15 = new System.Windows.Forms.Label();
@@ -66,9 +69,6 @@
             this.button2 = new System.Windows.Forms.Button();
             this.label18 = new System.Windows.Forms.Label();
             this.dayDate = new System.Windows.Forms.TextBox();
-            this.installmentValue_in_arabic = new System.Windows.Forms.TextBox();
-            this.loanValue_in_arabic = new System.Windows.Forms.TextBox();
-            this.inValue_with_in_arabic = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -250,6 +250,39 @@
             this.panel2.Size = new System.Drawing.Size(353, 632);
             this.panel2.TabIndex = 3;
             this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
+            // 
+            // inValue_with_in_arabic
+            // 
+            this.inValue_with_in_arabic.BackColor = System.Drawing.SystemColors.WindowFrame;
+            this.inValue_with_in_arabic.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.inValue_with_in_arabic.Location = new System.Drawing.Point(9, 545);
+            this.inValue_with_in_arabic.Name = "inValue_with_in_arabic";
+            this.inValue_with_in_arabic.ReadOnly = true;
+            this.inValue_with_in_arabic.Size = new System.Drawing.Size(337, 26);
+            this.inValue_with_in_arabic.TabIndex = 68;
+            this.inValue_with_in_arabic.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // loanValue_in_arabic
+            // 
+            this.loanValue_in_arabic.BackColor = System.Drawing.SystemColors.WindowFrame;
+            this.loanValue_in_arabic.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.loanValue_in_arabic.Location = new System.Drawing.Point(9, 463);
+            this.loanValue_in_arabic.Name = "loanValue_in_arabic";
+            this.loanValue_in_arabic.ReadOnly = true;
+            this.loanValue_in_arabic.Size = new System.Drawing.Size(337, 26);
+            this.loanValue_in_arabic.TabIndex = 67;
+            this.loanValue_in_arabic.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // installmentValue_in_arabic
+            // 
+            this.installmentValue_in_arabic.BackColor = System.Drawing.SystemColors.WindowFrame;
+            this.installmentValue_in_arabic.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.installmentValue_in_arabic.Location = new System.Drawing.Point(9, 329);
+            this.installmentValue_in_arabic.Name = "installmentValue_in_arabic";
+            this.installmentValue_in_arabic.ReadOnly = true;
+            this.installmentValue_in_arabic.Size = new System.Drawing.Size(337, 26);
+            this.installmentValue_in_arabic.TabIndex = 66;
+            this.installmentValue_in_arabic.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // label16
             // 
@@ -480,6 +513,7 @@
             this.button2.TabIndex = 4;
             this.button2.Text = "الرجوع الي التعديل";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // label18
             // 
@@ -507,46 +541,13 @@
             this.dayDate.TabIndex = 65;
             this.dayDate.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
-            // installmentValue_in_arabic
-            // 
-            this.installmentValue_in_arabic.BackColor = System.Drawing.SystemColors.WindowFrame;
-            this.installmentValue_in_arabic.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.installmentValue_in_arabic.Location = new System.Drawing.Point(9, 329);
-            this.installmentValue_in_arabic.Name = "installmentValue_in_arabic";
-            this.installmentValue_in_arabic.ReadOnly = true;
-            this.installmentValue_in_arabic.Size = new System.Drawing.Size(337, 26);
-            this.installmentValue_in_arabic.TabIndex = 66;
-            this.installmentValue_in_arabic.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            // 
-            // loanValue_in_arabic
-            // 
-            this.loanValue_in_arabic.BackColor = System.Drawing.SystemColors.WindowFrame;
-            this.loanValue_in_arabic.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.loanValue_in_arabic.Location = new System.Drawing.Point(9, 463);
-            this.loanValue_in_arabic.Name = "loanValue_in_arabic";
-            this.loanValue_in_arabic.ReadOnly = true;
-            this.loanValue_in_arabic.Size = new System.Drawing.Size(337, 26);
-            this.loanValue_in_arabic.TabIndex = 67;
-            this.loanValue_in_arabic.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            // 
-            // inValue_with_in_arabic
-            // 
-            this.inValue_with_in_arabic.BackColor = System.Drawing.SystemColors.WindowFrame;
-            this.inValue_with_in_arabic.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.inValue_with_in_arabic.Location = new System.Drawing.Point(9, 545);
-            this.inValue_with_in_arabic.Name = "inValue_with_in_arabic";
-            this.inValue_with_in_arabic.ReadOnly = true;
-            this.inValue_with_in_arabic.Size = new System.Drawing.Size(337, 26);
-            this.inValue_with_in_arabic.TabIndex = 68;
-            this.inValue_with_in_arabic.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            // 
-            // loanCompanyReportPreview
+            // loanNormalCaseCompanyRPreview
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 24F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.BackColor = System.Drawing.Color.Gray;
-            this.ClientSize = new System.Drawing.Size(824, 449);
+            this.ClientSize = new System.Drawing.Size(841, 449);
             this.Controls.Add(this.dayDate);
             this.Controls.Add(this.label18);
             this.Controls.Add(this.button2);
@@ -559,7 +560,7 @@
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Margin = new System.Windows.Forms.Padding(6);
-            this.Name = "loanCompanyReportPreview";
+            this.Name = "loanNormalCaseCompanyRPreview";
             this.Padding = new System.Windows.Forms.Padding(0, 0, 0, 20);
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "loanReportPreview";

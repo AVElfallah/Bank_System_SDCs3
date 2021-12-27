@@ -119,8 +119,8 @@ namespace Bank_System.view
 
         private void button4_Click(object sender, EventArgs e)
         {
-            newPersonalLoan personalLoan =new newPersonalLoan();    
-            personalLoan.ShowDialog();  
+            newPersonalLoan personalLoan = new newPersonalLoan();
+            personalLoan.ShowDialog();
         }
     }
 }

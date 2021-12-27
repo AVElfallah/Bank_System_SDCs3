@@ -27,6 +27,7 @@ namespace Bank_System.viewmodel
                 .ConvertToArabic();
             installmentsNumber.Text = loan.installmentsNumber.ToString();
             installmentSystem.Text = loan.installmentsSystem;
+
             installmentValue.Text = loan.installmentValue.ToString();
             installmentValue_in_arabic.Text = new model.ToWord(loan.installmentValue, loan.tempcompany.crruncy).ConvertToArabic();
             binfetPrecentage.Text = loan.benfitPrecent.ToString();
@@ -35,6 +36,7 @@ namespace Bank_System.viewmodel
             installmentWithBinfet.Text = loan.installmentValueWithBinfets.ToString();
             inValue_with_in_arabic.Text = new model.ToWord(loan.installmentValueWithBinfets, loan.tempcompany.crruncy).ConvertToArabic();
             loanEndDate.Text = model.calcLoanEndDate.endDateString(loan.loanEndDate);
+        
             if (loan.haveBankAccount)
             {
 
@@ -70,6 +72,9 @@ namespace Bank_System.viewmodel
             MessageBox.Show(" تمت طباعة التقارير جري الحفظ");
             if (db.companyLoanDB.addLoanWithoutAccount(loan))
             {
+
+                model.systemData.navigator.formStore.Pop().Visible = true;
+                this.Close();
                 MessageBox.Show("تم الحفظ");
             }
             else
@@ -86,6 +91,12 @@ namespace Bank_System.viewmodel
         private void ishaveanotherbank_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            model.systemData.navigator.formStore.Pop().Visible = true;
         }
     }
 }

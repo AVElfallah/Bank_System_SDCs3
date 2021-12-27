@@ -59,6 +59,8 @@
     <Compile Include="db\companyAccountDB.cs" />
     <Compile Include="db\companyLoanDB.cs" />
     <Compile Include="db\createConnection.cs" />
+    <Compile Include="db\dipositAndWithdrawal.cs" />
+    <Compile Include="db\installmentsDB.cs" />
     <Compile Include="db\personalAccountDB.cs" />
     <Compile Include="db\personalLoanDB.cs" />
     <Compile Include="db\systemLogin.cs" />
@@ -68,6 +70,7 @@
     <Compile Include="model\FormModel.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="model\installment.cs" />
     <Compile Include="model\LoanClasses\companyWithAccountInOurBankLoan.cs" />
     <Compile Include="model\LoanClasses\companyWithoutAccountLoan.cs" />
     <Compile Include="model\LoanClasses\loanBase.cs" />

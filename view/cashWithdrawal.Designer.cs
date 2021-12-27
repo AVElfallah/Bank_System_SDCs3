@@ -36,21 +36,25 @@
             this.cash = new System.Windows.Forms.TextBox();
             this.button2 = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.cash_withdrawal = new System.Windows.Forms.TextBox();
             this.button3 = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
             this.name = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.crruncy = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.label7 = new System.Windows.Forms.Label();
+            this.installmentformonth = new System.Windows.Forms.TextBox();
             this.button4 = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.personalacc = new System.Windows.Forms.RadioButton();
             this.companyacc = new System.Windows.Forms.RadioButton();
             this.arabic_cash = new System.Windows.Forms.TextBox();
+            this.arabic_installment = new System.Windows.Forms.TextBox();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.date = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
+            this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // accountNumber
@@ -114,28 +118,29 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(438, 341);
+            this.label3.Location = new System.Drawing.Point(438, 384);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(92, 24);
             this.label3.TabIndex = 7;
             this.label3.Text = "مبلغ السحب";
             // 
-            // textBox2
+            // cash_withdrawal
             // 
-            this.textBox2.Location = new System.Drawing.Point(148, 336);
-            this.textBox2.Margin = new System.Windows.Forms.Padding(6);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(229, 29);
-            this.textBox2.TabIndex = 6;
+            this.cash_withdrawal.Location = new System.Drawing.Point(148, 379);
+            this.cash_withdrawal.Margin = new System.Windows.Forms.Padding(6);
+            this.cash_withdrawal.Name = "cash_withdrawal";
+            this.cash_withdrawal.Size = new System.Drawing.Size(229, 29);
+            this.cash_withdrawal.TabIndex = 6;
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(12, 336);
+            this.button3.Location = new System.Drawing.Point(12, 379);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(118, 31);
             this.button3.TabIndex = 8;
             this.button3.Text = "سحب";
             this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // label4
             // 
@@ -188,28 +193,17 @@
             this.label6.TabIndex = 14;
             this.label6.Text = "قسط مطلوب لهذا الشهر";
             // 
-            // textBox5
+            // installmentformonth
             // 
-            this.textBox5.BackColor = System.Drawing.SystemColors.ControlDark;
-            this.textBox5.Location = new System.Drawing.Point(148, 264);
-            this.textBox5.Margin = new System.Windows.Forms.Padding(6);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.ReadOnly = true;
-            this.textBox5.Size = new System.Drawing.Size(213, 29);
-            this.textBox5.TabIndex = 13;
-            this.textBox5.Text = "لا يوجد";
-            this.textBox5.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.BackColor = System.Drawing.SystemColors.GrayText;
-            this.label7.ForeColor = System.Drawing.Color.Azure;
-            this.label7.Location = new System.Drawing.Point(114, 299);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(290, 24);
-            this.label7.TabIndex = 15;
-            this.label7.Text = "قسط من قرض إتماني بتاريخ 1/1/1111";
+            this.installmentformonth.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.installmentformonth.Location = new System.Drawing.Point(148, 264);
+            this.installmentformonth.Margin = new System.Windows.Forms.Padding(6);
+            this.installmentformonth.Name = "installmentformonth";
+            this.installmentformonth.ReadOnly = true;
+            this.installmentformonth.Size = new System.Drawing.Size(213, 29);
+            this.installmentformonth.TabIndex = 13;
+            this.installmentformonth.Text = "لا يوجد";
+            this.installmentformonth.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // button4
             // 
@@ -266,25 +260,69 @@
             this.arabic_cash.Text = "50,000";
             this.arabic_cash.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
+            // arabic_installment
+            // 
+            this.arabic_installment.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.arabic_installment.Location = new System.Drawing.Point(12, 297);
+            this.arabic_installment.Margin = new System.Windows.Forms.Padding(6);
+            this.arabic_installment.Name = "arabic_installment";
+            this.arabic_installment.ReadOnly = true;
+            this.arabic_installment.Size = new System.Drawing.Size(518, 29);
+            this.arabic_installment.TabIndex = 24;
+            this.arabic_installment.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // panel2
+            // 
+            this.panel2.Controls.Add(this.date);
+            this.panel2.Controls.Add(this.label7);
+            this.panel2.Location = new System.Drawing.Point(12, 338);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(518, 32);
+            this.panel2.TabIndex = 23;
+            this.panel2.Visible = false;
+            // 
+            // date
+            // 
+            this.date.AutoSize = true;
+            this.date.BackColor = System.Drawing.SystemColors.GrayText;
+            this.date.ForeColor = System.Drawing.Color.Azure;
+            this.date.Location = new System.Drawing.Point(91, 5);
+            this.date.Name = "date";
+            this.date.Size = new System.Drawing.Size(99, 24);
+            this.date.TabIndex = 20;
+            this.date.Text = "11/9/2001";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.BackColor = System.Drawing.SystemColors.GrayText;
+            this.label7.ForeColor = System.Drawing.Color.Azure;
+            this.label7.Location = new System.Drawing.Point(198, 5);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(212, 24);
+            this.label7.TabIndex = 15;
+            this.label7.Text = "قسط من قرض إتماني بتاريخ ";
+            // 
             // cashWithdrawal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 24F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Gray;
-            this.ClientSize = new System.Drawing.Size(554, 93);
+            this.ClientSize = new System.Drawing.Size(554, 100);
+            this.Controls.Add(this.arabic_installment);
+            this.Controls.Add(this.panel2);
             this.Controls.Add(this.arabic_cash);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.button4);
-            this.Controls.Add(this.label7);
             this.Controls.Add(this.label6);
-            this.Controls.Add(this.textBox5);
+            this.Controls.Add(this.installmentformonth);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.crruncy);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.name);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.cash_withdrawal);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.cash);
@@ -300,6 +338,8 @@
             this.Text = "سحب مالي";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -314,19 +354,22 @@
         private System.Windows.Forms.TextBox cash;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox cash_withdrawal;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox name;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox crruncy;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.TextBox installmentformonth;
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.RadioButton personalacc;
         private System.Windows.Forms.RadioButton companyacc;
         private System.Windows.Forms.TextBox arabic_cash;
+        private System.Windows.Forms.TextBox arabic_installment;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Label date;
+        private System.Windows.Forms.Label label7;
     }
 }

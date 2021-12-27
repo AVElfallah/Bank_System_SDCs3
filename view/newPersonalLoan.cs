@@ -23,8 +23,8 @@ namespace Bank_System.view
                   bankAccountReport_FileDialog.FileName != "" &&
                   elcReceipt_FileDialog.FileName != "" &&
                   salaryTrans_FileDialog.FileName != "" &&
-                  nationalID_FileDialog.FileName!=""&&
-                  tradeReport_FileDialog.FileName!=""&&
+                  nationalID_FileDialog.FileName != "" &&
+                  tradeReport_FileDialog.FileName != "" &&
                   loanValue2.Text != "" &&
                   installmentsNumber2.Text != "" &&
                   installmentsSystem2.Text != ""
@@ -42,9 +42,9 @@ namespace Bank_System.view
             if (personalAccount != null &&
                 fieldPreviewNotes.Text != "" &&
                 fieldPreview_FileDialog.FileName != "" &&
-                bankAccountReport_FileDialog.FileName!=""&&
-                elcReceipt_FileDialog.FileName != ""&&
-                salaryTrans_FileDialog.FileName!=""&&
+                bankAccountReport_FileDialog.FileName != "" &&
+                elcReceipt_FileDialog.FileName != "" &&
+                salaryTrans_FileDialog.FileName != "" &&
 
                 loanValue.Text != "" &&
                 installmentsNumber.Text != "" &&
@@ -207,9 +207,10 @@ namespace Bank_System.view
 
         private void button3_Click(object sender, EventArgs e)
         {
-            if (validationNormalCase()) {
+            if (validationNormalCase())
+            {
 
-                loan=new model.LoanClasses.personalLoan();
+                loan = new model.LoanClasses.personalLoan();
                 loan.personal = personalAccount;
                 loan.loanEndDate = endDATE;
                 loan.fieldPreviewImage =
@@ -221,17 +222,20 @@ namespace Bank_System.view
                 loan.salaryTransferPhoto =
                 model.photo.encryption(salaryTrans_FileDialog.FileName);
                 loan.fieldPreviewNote = fieldPreviewNotes.Text;
-               
+
                 loan.loanID = model.RandomNumbers.accountNumberGen();
                 loan.installmentsNumber = double.Parse(installmentsNumber.Text);
                 loan.benfitPrecent = double.Parse(binfetPrecentage.Text);
                 loan.loanValue = double.Parse(loanValue.Text);
-                loan.loanValueWithBinfets = loan.loanValue + (loan.benfitPrecent/100)*loan.loanValue;
-                loan.installmentsSystem=installmentsPaymentsSys.Text;
-                loan.installmentValue =  double.Parse(installmentValue.Text);
+                loan.loanValueWithBinfets = loan.loanValue + (loan.benfitPrecent / 100) * loan.loanValue;
+                loan.installmentsSystem = installmentsPaymentsSys.Text;
+                loan.setINTInsSystem(installmentsPaymentsSys.Text);
+                loan.installmentValue = double.Parse(installmentValue.Text);
                 loan.ISCBankUser = true;
                 loan.installmentValueWithBinfets = double.Parse(installmentWithBinfet.Text);
-                viewmodel.loanPersonalRPrieview rPrieview =new viewmodel.loanPersonalRPrieview (loan) ;
+                viewmodel.loanPersonalRPrieview rPrieview = new viewmodel.loanPersonalRPrieview(loan);
+                model.systemData.navigator.formStore.Push(this);
+                this.Visible = false;
                 rPrieview.ShowDialog();
             }
             else
@@ -255,13 +259,15 @@ namespace Bank_System.view
                 trade_report.Image = model.photo.decryption(personalAccount.tradeReportPhoto);
                 national_Id.Image = model.photo.decryption(personalAccount.nationalIdPhoto);
 
-                p1.Visible = true;  
-                p2.Visible=true;    
+                p1.Visible = true;
+                p2.Visible = true;
             }
-            else {
+            else
+            {
                 p1.Visible = false;
-                p2.Visible=false;
-                MessageBox.Show("لاينتمي هذا الرقم لأي حساب بالنظام"); }
+                p2.Visible = false;
+                MessageBox.Show("لاينتمي هذا الرقم لأي حساب بالنظام");
+            }
         }
 
         private void pictureBox3_Click(object sender, EventArgs e)
@@ -411,7 +417,7 @@ namespace Bank_System.view
             new viewmodel
                            .previewIMGDialog(nationalID_FileDialog.FileName
                          , new System.Drawing.Bitmap(nationalID_FileDialog.FileName)).ShowDialog();
-            
+
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)
@@ -419,21 +425,21 @@ namespace Bank_System.view
             tradeReport_FileDialog.ShowDialog();
             if (tradeReport_FileDialog.FileName != "")
             {
-                tradereport2.Text=tradeReport_FileDialog.FileName;  
+                tradereport2.Text = tradeReport_FileDialog.FileName;
             }
         }
 
         private void pictureBox5_Click(object sender, EventArgs e)
         {
-  new viewmodel
-                           .previewIMGDialog(tradeReport_FileDialog.FileName
-                         , new System.Drawing.Bitmap(tradeReport_FileDialog.FileName)).ShowDialog();
+            new viewmodel
+                                     .previewIMGDialog(tradeReport_FileDialog.FileName
+                                   , new System.Drawing.Bitmap(tradeReport_FileDialog.FileName)).ShowDialog();
 
         }
 
         private void pictureBox8_Click(object sender, EventArgs e)
         {
- elcReceipt_FileDialog.ShowDialog();
+            elcReceipt_FileDialog.ShowDialog();
             if (elcReceipt_FileDialog.FileName != "")
             {
                 elcrecepit2.Text = elcReceipt_FileDialog.FileName;
@@ -539,10 +545,13 @@ namespace Bank_System.view
                 loan.loanValue = double.Parse(loanValue2.Text);
                 loan.loanValueWithBinfets = loan.loanValue + (loan.benfitPrecent / 100) * loan.loanValue;
                 loan.installmentsSystem = installmentsSystem2.Text;
+                loan.setINTInsSystem(installmentsSystem2.Text);
                 loan.installmentValue = double.Parse(installmentValue2.Text);
                 loan.ISCBankUser = false;
                 loan.installmentValueWithBinfets = double.Parse(installmentWithBinfets2.Text);
                 viewmodel.loanPersonalRPrieview rPrieview = new viewmodel.loanPersonalRPrieview(loan);
+                model.systemData.navigator.formStore.Push(this);
+                this.Visible = false;
                 rPrieview.ShowDialog();
             }
             else

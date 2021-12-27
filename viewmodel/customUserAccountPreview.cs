@@ -64,34 +64,29 @@ namespace Bank_System.viewmodel
 
         private void end_Click(object sender, EventArgs e)
         {
-            if (personal.accountVisa != null)
-            {
-                if (db.personalAccountDB.addAccountWithVisa(personal))
+          
+                if (db.personalAccountDB.addAccount(personal))
                 {
 
                     MessageBox.Show("تم انشاء الحساب بشكل سليم");
 
-                    model.systemData.navigator.formStore.Pop().Hide();
-                    this.Hide();
-                }
+                    model.systemData.navigator.formStore.Pop().Close();
+                    this.Close();
             }
-            else if (db.personalAccountDB.addAccountWithoutVisa(personal))
+            else
             {
-
-                MessageBox.Show("تم انشاء الحساب بشكل سليم");
-
-                model.systemData.navigator.formStore.Pop().Hide();
-                this.Hide();
+                MessageBox.Show("خطاء في انشاء الحساب");
             }
+         
         }
 
         private void edit_Click(object sender, EventArgs e)
         {
-
+            this.Close();
             var edit = model.systemData.navigator.formStore.Pop();
             edit.Visible = true;
 
-            this.Hide();
+
         }
     }
 }

@@ -29,6 +29,7 @@ namespace Bank_System.view
                 account.companyAccount = companyAccount;
                 account.installmentsNumber = double.Parse(installmentsNumber.Text);
                 account.installmentsSystem = installmentsPaymentsSys.Text;
+                account.setINTInsSystem(account.installmentsSystem);
                 account.installmentValue = double.Parse(installmentValue.Text);
                 account.installmentValueWithBinfets = double.Parse(installmentWithBinfet.Text);
                 account.loanValue = double.Parse(loanValue.Text);
@@ -40,6 +41,8 @@ namespace Bank_System.view
                 account.fieldPreviewNote = fieldPreviewNotes.Text;
                 account.fieldPreviewImage = model.photo.encryption(fieldPreview_FileDialog.FileName);
                 var preview = new viewmodel.loanNormalCaseCompanyRPreview(account);
+                model.systemData.navigator.formStore.Push(this);
+                this.Visible = false;
                 preview.ShowDialog();
 
 
@@ -112,7 +115,7 @@ namespace Bank_System.view
         private void button2_Click(object sender, EventArgs e)
         {
             newCompanyAccount account = new newCompanyAccount();
-            this.Hide();
+            this.Close();
             account.ShowDialog();
 
         }
@@ -256,12 +259,15 @@ namespace Bank_System.view
                 accountLoan.installmentsNumber = double.Parse(installmentsNumber2.Text);
                 accountLoan.benfitPrecent = double.Parse(binfetPrecentage2.Text);
                 accountLoan.installmentsSystem = installmentsSystem2.Text;
+                accountLoan.setINTInsSystem(installmentsSystem2.Text);
                 accountLoan.installmentValue = double.Parse(installmentValue2.Text);
                 accountLoan.installmentValueWithBinfets = double.Parse(installmentWithBinfets2.Text);
                 accountLoan.loanEndDate = endDATE;
                 viewmodel.loan2ndCaseCompanyRPreview loan2Nd = new viewmodel.loan2ndCaseCompanyRPreview(accountLoan);
                 accountLoan.loanID =
                     model.RandomNumbers.accountNumberGen();
+                model.systemData.navigator.formStore.Push(this);
+                this.Visible = false;
                 loan2Nd.ShowDialog();
 
 

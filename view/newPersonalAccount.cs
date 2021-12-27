@@ -3,18 +3,21 @@ using System.Drawing;
 
 namespace Bank_System.view
 {
+
     public partial class newPersonalAccount : model.FormWithPlugins
     {
+        model.personalAccount account;
         public newPersonalAccount()
         {
             InitializeComponent();
+            account = new model.personalAccount();
         }
 
 
 
         private void button1_Click_1(object sender, EventArgs e)
         {
-            model.personalAccount account = new model.personalAccount();
+
 
             account.name = fullName.Text;
             account.accountNumber = model.RandomNumbers.accountNumberGen();
@@ -46,13 +49,14 @@ namespace Bank_System.view
 
 
             }
-            else {
+            else
+            {
                 model.systemData.navigator.formStore.Push(this);
                 viewmodel.customUserAccountPreview custom = new viewmodel.customUserAccountPreview(account);
                 this.Visible = false;
                 custom.ShowDialog();
             }
-         
+
         }
 
         private void pictureBox1_Click_1(object sender, EventArgs e)

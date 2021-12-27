@@ -44,9 +44,7 @@
             this.tradeReportPhoto = new System.Windows.Forms.PictureBox();
             this.label9 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
-            this.accountType = new System.Windows.Forms.TextBox();
             this.crruncy = new System.Windows.Forms.TextBox();
             this.accountReport = new System.Windows.Forms.TextBox();
             this.cashAccount = new System.Windows.Forms.TextBox();
@@ -216,7 +214,7 @@
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(271, 590);
+            this.label9.Location = new System.Drawing.Point(271, 580);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(103, 24);
             this.label9.TabIndex = 34;
@@ -226,21 +224,11 @@
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(325, 554);
+            this.label8.Location = new System.Drawing.Point(325, 528);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(49, 24);
             this.label8.TabIndex = 35;
             this.label8.Text = "العملة";
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(286, 510);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(94, 24);
-            this.label10.TabIndex = 33;
-            this.label10.Text = "نوع الحساب";
             // 
             // label11
             // 
@@ -252,21 +240,10 @@
             this.label11.TabIndex = 32;
             this.label11.Text = "مبلغ الايداع";
             // 
-            // accountType
-            // 
-            this.accountType.BackColor = System.Drawing.SystemColors.WindowFrame;
-            this.accountType.Location = new System.Drawing.Point(12, 510);
-            this.accountType.Name = "accountType";
-            this.accountType.ReadOnly = true;
-            this.accountType.Size = new System.Drawing.Size(268, 26);
-            this.accountType.TabIndex = 36;
-            this.accountType.Text = "t";
-            this.accountType.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            // 
             // crruncy
             // 
             this.crruncy.BackColor = System.Drawing.SystemColors.WindowFrame;
-            this.crruncy.Location = new System.Drawing.Point(12, 552);
+            this.crruncy.Location = new System.Drawing.Point(12, 526);
             this.crruncy.Name = "crruncy";
             this.crruncy.ReadOnly = true;
             this.crruncy.Size = new System.Drawing.Size(312, 26);
@@ -277,7 +254,7 @@
             // accountReport
             // 
             this.accountReport.BackColor = System.Drawing.SystemColors.WindowFrame;
-            this.accountReport.Location = new System.Drawing.Point(12, 588);
+            this.accountReport.Location = new System.Drawing.Point(12, 578);
             this.accountReport.Name = "accountReport";
             this.accountReport.ReadOnly = true;
             this.accountReport.Size = new System.Drawing.Size(253, 26);
@@ -442,10 +419,8 @@
             this.Controls.Add(this.cashAccount);
             this.Controls.Add(this.accountReport);
             this.Controls.Add(this.crruncy);
-            this.Controls.Add(this.accountType);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.label8);
-            this.Controls.Add(this.label10);
             this.Controls.Add(this.label11);
             this.Controls.Add(this.tradeReportPhoto);
             this.Controls.Add(this.label7);
@@ -493,9 +468,7 @@
         private System.Windows.Forms.PictureBox tradeReportPhoto;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.TextBox accountType;
         private System.Windows.Forms.TextBox crruncy;
         private System.Windows.Forms.TextBox accountReport;
         private System.Windows.Forms.TextBox cashAccount;
