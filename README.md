@@ -1,7 +1,7 @@
 
 # Bank System Mangement
 
-is a small mangement System created by computer since students
+Is a small management System created by computer since students
 
 
 ## Authors
